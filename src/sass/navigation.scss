@@ -1,0 +1,106 @@
+@import '../App.scss';
+
+.header {
+    width: 100%;
+}
+
+.header__navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    background-color: #e7e7e7;
+}
+
+.header__navigation--sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.header__burger {
+    display: none;
+}
+
+.header__logo {
+    cursor: pointer;
+    font-family: "Patrick Hand", "OpenSans Bold", Helvetica, sans-serif;
+    @include fontSet(35px, 35px);
+}
+
+.header__nav-list {
+    display: flex;
+    margin-bottom: 0;
+}
+
+.header__nav-list-item {
+    font-family: "OpenSans Light", Helvetica, sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+    border-bottom: 2px solid transparent;
+    transition: all 0.7s cubic-bezier(0.38, 0.19, 0.39, 0.99);
+    &:not(:last-of-type) {
+        margin-right: 45px;
+    }
+    &:hover {
+        border-bottom: 2px solid $mainAccent;
+    }
+}
+
+/*   ADAPTIVE   */
+
+@media (max-width: 529px) {
+    .header__burger {
+        display: flex;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
+        background-image: url("../img/icons/burger.png");
+        @include backgroundSet();
+    }
+    .header__nav-list {
+        display: none;
+    }
+    .header__navigation {
+        padding: 15px 20px;
+        background-color: transparent;
+    }
+}
+
+@media (max-width: 699px) {
+    .header__logo {
+        display: none;
+    }
+}
+
+@media (min-width: 530px) and (max-width: 699px) {
+    .header__navigation {
+        justify-content: center;
+        padding: 10px;
+    }
+    .header__nav-list-item {
+        font-size: 20px;
+        &:not(:last-of-type) {
+            margin-right: 20px;
+        }
+    }
+}
+
+@media (min-width: 700px) and( max-width:1000px) {
+    .header__navigation {
+        justify-content: space-between;
+        padding: 15px 20px;
+    }
+    .header__logo {
+        margin-left: 50px;
+        margin-right: 50px;
+        font-size: 25px;
+    }
+    .header__nav-list-item {
+        font-size: 15px;
+        &:not(:last-of-type) {
+            margin-right: 25px;
+        }
+    }
+}

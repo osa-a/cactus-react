@@ -1,0 +1,80 @@
+@mixin mainReset {
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+  }
+  *:active {
+    outline: none;
+  }
+  *:focus {
+    outline: 0;
+  }
+}
+
+@mixin listReset {
+  ul {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+  }
+
+  li {
+    list-style-type: none;
+    padding-left: 0;
+  }
+}
+
+@mixin linkReset {
+  a {
+    color: #000000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+}
+
+@mixin headerReset {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}
+
+/*   SET   */
+
+@mixin backgroundSet {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin fontSet($fs, $lh, $fw: 400) {
+  font-size: $fs;
+  line-height: $lh;
+  font-weight: $fw;
+}
+
+@mixin placeholderSet() {
+  ::-webkit-input-placeholder {
+    font-style: italic;
+  }
+  :-moz-placeholder {
+    font-style: italic;
+  }
+  ::-moz-placeholder {
+    font-style: italic;
+  }
+  :-ms-input-placeholder {
+    font-style: italic;
+  }
+}

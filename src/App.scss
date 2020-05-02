@@ -1,0 +1,13 @@
+@import "sass/fonts";
+@import "sass/colors";
+@import "sass/mixins";
+
+@include mainReset();
+@include listReset();
+@include linkReset();
+@include headerReset();
+
+.body-container{
+    max-width: 1920px;
+    margin: 0 auto;
+}
