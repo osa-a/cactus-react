@@ -5,7 +5,6 @@ import 'pure-react-carousel/dist/react-carousel.es.css';
 import '../sass/carouselAdaptive.scss';
 
 export class Carousel extends React.Component {
-
   render() {
     return (
       <CarouselProvider

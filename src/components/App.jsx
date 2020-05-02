@@ -2,6 +2,7 @@ import React from 'react';
 import '../App.scss';
 import { Navigation } from './Navigation';
 import { Carousel } from './Carousel';
+import { AboutUs } from './AboutUs';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       </header>
       <main className="main">
         <Carousel />
+        <AboutUs />
       </main>
       <footer></footer>
     </div>
