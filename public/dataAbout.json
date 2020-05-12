@@ -1,14 +1,17 @@
 {
-    "thinking": {
-        "name": "THINKING",
-        "text": "Thinking ipsum dolor sit amet consectetur adipisicing elit. Optio accusantium quas perspiciatis expedita voluptatum nemo ullam hic, debitis totam aperiam quae amet mollitia doloremque voluptates! Temporibus consequuntur magnam optio omnis? Voluptate sapiente eaque provident ut repudiandae fugiat facilis, at quae impedit soluta, exercitationem, illo obcaecati doloremque earum similique voluptatem ad recusandae enim et omnis debitis. Temporibus et pariatur omnis suscipit! Praesentium maxime et dicta repellendus perspiciatis dolorem qui unde cumque doloribus, voluptatibus tenetur, debitis harum numquam sint nobis! Tempora nesciunt incidunt ratione hic est ex perferendis qui iusto veritatis! Numquam."
-    },
-    "strategy": {
-        "name": "STRATEGY",
-        "text": "Strategy ipsum dolor, sit amet consectetur adipisicing elit. Fuga rerum qui laudantium enim dolorem. Natus ad, obcaecati ab commodi iure cupiditate illo dolorem adipisci libero assumenda qui iusto sapiente ea!Omnis distinctio dolorem non quaerat, provident animi? Quas illum nisi consequuntur, voluptas accusamus culpa neque fugit est corporis delectus iure quae magni recusandae molestiae enim iusto nostrum a officiis quaerat!"
-    },
-    "success": {
-        "name": "SUCCESS",
-        "text": "Success ipsum dolor sit amet, consectetur adipisicing elit. Unde nulla consequatur quam. Sequi eum laborum atque, maxime recusandae sapiente voluptates excepturi totam pariatur, harum error animi, quisquam quidem temporibus quod.Architecto, provident voluptas asperiores, dignissimos id harum aliquam fugiat eos pariatur saepe iste deleniti repudiandae obcaecati beatae, consectetur sint minus odit officia nobis suscipit at reprehenderit tenetur dolore culpa. Illo?"
-    }
+    "dataAbout": [
+        {
+            "name": "THINKING",
+            "text": "Thinking ipsum dolor sit amet consectetur adipisicing elit. Optio accusantium quas perspiciatis expedita voluptatum nemo ullam hic, debitis totam aperiam quae amet mollitia doloremque voluptates! Temporibus consequuntur magnam optio omnis? Voluptate sapiente eaque provident ut repudiandae fugiat facilis, at quae impedit soluta, exercitationem, illo obcaecati doloremque earum similique voluptatem ad recusandae enim et omnis debitis. Temporibus et pariatur omnis suscipit! Praesentium maxime et dicta repellendus perspiciatis dolorem qui unde cumque doloribus, voluptatibus tenetur, debitis harum numquam sint nobis! Tempora nesciunt incidunt ratione hic est ex perferendis qui iusto veritatis! Numquam."
+        },
+        {
+            "name": "STRATEGY",
+            "text": "Strategy ipsum dolor, sit amet consectetur adipisicing elit. Fuga rerum qui laudantium enim dolorem. Natus ad, obcaecati ab commodi iure cupiditate illo dolorem adipisci libero assumenda qui iusto sapiente ea!Omnis distinctio dolorem non quaerat, provident animi? Quas illum nisi consequuntur, voluptas accusamus culpa neque fugit est corporis delectus iure quae magni recusandae molestiae enim iusto nostrum a officiis quaerat!"
+        },
+        {
+            "name": "SUCCESS",
+            "text": "Success ipsum dolor sit amet, consectetur adipisicing elit. Unde nulla consequatur quam. Sequi eum laborum atque, maxime recusandae sapiente voluptates excepturi totam pariatur, harum error animi, quisquam quidem temporibus quod.Architecto, provident voluptas asperiores, dignissimos id harum aliquam fugiat eos pariatur saepe iste deleniti repudiandae obcaecati beatae, consectetur sint minus odit officia nobis suscipit at reprehenderit tenetur dolore culpa. Illo?"
+        }
+    ]
 }
+

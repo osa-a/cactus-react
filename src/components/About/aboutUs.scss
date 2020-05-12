@@ -1,0 +1,30 @@
+@import "../Main/App.scss";
+
+.main__about {
+    padding: 5vw 8vw;
+    background-color: #252424;
+}
+.main__about-header {
+    font-family: "OpenSans Bold", Arial, Helvetica, sans-serif;
+    @include fontSet(4vw, 6vw);
+    color: #ffffff;
+}
+.main__about-sub-header {
+    font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
+    @include fontSet(2vw, 4vw);
+    color: #ffffff;
+    width: fit-content;
+    animation: borderSliding 3s infinite;
+    background-image: linear-gradient($mainAccent, $mainAccent);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+}
+
+@keyframes borderSliding {
+    0% {
+        background-size: 0% 4px;
+    }
+    100% {
+        background-size: 100% 4px;
+    }
+}

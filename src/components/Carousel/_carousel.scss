@@ -1,0 +1,112 @@
+// .carousel {
+//     position: relative;
+// }
+
+// .main__carousel-img {
+//     filter: brightness(55%);
+// }
+
+// /*   SLIDER BUTTONS   */
+
+// .main__carousel-btn-wrapper {
+//     position: absolute;
+//     display: flex;
+//     justify-content: space-between;
+//     top: calc(50vw*0.45);
+//     width: 100%;
+// }
+
+// .main__carousel-btn {
+//     border: 2px solid $sliderBtn;
+//     border-radius: 50%;
+//     width: 35px;
+//     height: 35px;
+//     background-color: transparent;
+//     @include fontSet(25px, 25px);
+//     padding-bottom: 5px;
+//     color: #dfdfdf;
+//     transition: all 0.2s ease-in-out;
+//     &:hover {
+//         color: $sliderBtnHover;
+//     }
+// }
+
+// .main__carousel-back-btn {
+//     margin-left: 2.5vw;
+// }
+
+// .main__carousel-next-btn {
+//     margin-right: 2.5vw;
+// }
+
+// /*   SLIDER TEXT   */
+
+// .main__carousel-info-wrapper {
+//     font-family: "OpenSans Regular", Helvetica, sans-serif;
+//     background-color: rgba(0, 0, 0, 0.493);
+//     padding: 3vw;
+//     display: flex;
+//     flex-direction: column;
+//     position: absolute;
+//     width: 60vw;
+//     z-index: 1;
+//     top: calc(50vh * 0.5);
+//     left: calc(50vw * 0.4);
+// }
+
+// .main__carousel-header {
+//     @include fontSet(3vw, 3vw);
+//     color: #ffffff;
+//     margin-bottom: 3vw;
+// }
+
+// .main__carousel-text {
+//     display: flex;
+//     flex-wrap: wrap;
+//     @include fontSet(1.5vw, 2.5vw);
+//     color: #dadada;
+//     margin-bottom: 2vw;
+// }
+
+// .main__carousel-about-btn {
+//     display: flex;
+//     align-self: flex-end;
+//     cursor: pointer;
+//     @include fontSet(1vw, 1vw);
+//     color: #ffffff;
+//     border: 2px solid #ffffff;
+//     background-color: transparent;
+//     padding: 0.7vw;
+//     transition: all 0.3s ease-in-out;
+//     width: fit-content;
+//     &:hover {
+//         border: 2px solid transparent;
+//         background-color: $mainAccent;
+//     }
+// }
+
+// /*   SCROLL BTN   */
+
+// .main__carousel-scroll-btn {
+//     cursor: pointer;
+//     background: none;
+//     border: none;
+//     font-size: 4vw;
+//     color: $sliderBtn;
+//     position: absolute;
+//     left: (50vw * 0.9);
+//     animation: sliding 1.3s infinite;
+//     transition: all 0.2s ease-in-out;
+//     &:hover {
+//         color: $sliderBtnHover;
+//     }
+// }
+
+// @keyframes sliding {
+//     0% {
+//         bottom: 2vw;
+//     }
+//     100% {
+//         bottom: 0.5vw;
+//     }
+// }
