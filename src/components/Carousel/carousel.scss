@@ -1,0 +1,16 @@
+/* main bootstrap styles */
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+@import '~bootstrap/scss/root';
+
+/* carousel bootstrap styles */
+@import '~bootstrap/scss/type';
+@import "~bootstrap/scss/transitions";
+@import "~bootstrap/scss/media";
+@import '~bootstrap/scss/carousel';
+@import "~bootstrap/scss/utilities";
+
+.main__carousel-img{
+    filter: brightness(50%);
+}
