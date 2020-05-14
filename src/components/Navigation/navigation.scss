@@ -48,6 +48,12 @@
     }
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
 /*   ADAPTIVE   */
 
 @media (max-width: 529px) {

@@ -3,6 +3,7 @@ import './App.scss';
 import { Navigation } from '../Navigation/Navigation';
 import { Carousel } from '../Carousel/Carousel';
 import { AboutUs } from '../About/AboutUs';
+import {Parallax} from '../Parallax/Parallax';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
       <main className="main">
         <Carousel />
         <AboutUs />
+        <Parallax />
       </main>
       <footer></footer>
     </div>

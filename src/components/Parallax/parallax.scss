@@ -1,0 +1,53 @@
+@import "../Main/App.scss";
+
+.main__parallax-wrapper {
+    padding: 8em 5em;
+    background-image: url("./img/1.jpg");
+    @include backgroundSet();
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__parallax-info {
+    width: 55vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(43, 49, 43, 0.664);
+    padding: 5em;
+    border-radius: 25px;
+}
+
+.main__parallax-header {
+    font-family: "OpenSans Light", Arial, Helvetica, sans-serif;
+    font-size: 3.5em;
+    color: #ffffff;
+    margin-bottom: 0.7em;
+    text-align: left;
+}
+
+.main__parallax-description {
+    font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
+    @include fontSet(1.5em, 1.8em);
+    color: #ffffff;
+    margin-bottom: 1.5em;
+    text-align: justify;
+}
+
+.main__parallax-button {
+    font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
+    background-color: transparent;
+    padding: 0.8em;
+    border: 3px solid #ffffff;
+    font-size: 1.5em;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+    &:hover {
+        border: 3px solid $mainAccent;
+        border-radius: 25px;
+        background-color: #21a179;
+    }
+}

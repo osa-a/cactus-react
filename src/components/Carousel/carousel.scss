@@ -30,7 +30,7 @@
 
 .main__carousel-header--caption {
     font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
-    font-size: 1.5em;
+    font-size: 2em;
     line-height: 1.6em;
 }
 
@@ -44,9 +44,9 @@
     color: #ffffff;
     font-size: 1.5em;
     &:hover {
-        border: 5px solid $mainAccent;
+        border: 3px solid $mainAccent;
         border-radius: 25px;
-        background-color: #356d50;
+        background-color: #21a179;
     }
 }
 

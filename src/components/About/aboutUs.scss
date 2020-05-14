@@ -3,26 +3,26 @@
 /*   HEADERS   */
 
 .main__about {
-    padding: 5vw 8vw 10vw 8vw;
+    padding: 4vw 15vw 6vw 15vw;
     background-color: #252424;
 }
 
 .main__about-heading-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
-    margin-bottom: 5em;
+    align-items: flex-start;
+    margin-bottom: 4.5vw;
 }
 
 .main__about-header {
     font-family: "OpenSans Bold", Arial, Helvetica, sans-serif;
-    @include fontSet(4vw, 6vw);
+    @include fontSet(3.5em, 1.2em);
     color: #ffffff;
 }
 
 .main__about-sub-header {
     font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
-    @include fontSet(2vw, 4vw);
+    @include fontSet(2em, 2em);
     color: #ffffff;
     width: fit-content;
     padding-bottom: 5px;
@@ -33,8 +33,7 @@
 }
 
 .main__about-headers-border {
-    border-bottom: 4px solid $mainAccent;
-
+    border-bottom: 4px dashed $mainAccent;
 }
 
 /*   DESCRIPTION LIST  */
@@ -44,7 +43,7 @@
     align-items: center;
 }
 
-.main__about-list{
+.main__about-list {
     width: 45vw;
 }
 
@@ -91,21 +90,33 @@
     }
 }
 
-.default-focus{
+.default-focus {
     color: #ffffff;
 }
 
 /*   DESCRIPTION   */
 
 .main__about-list-element-content {
-    font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
-    @include fontSet (1.2em, 1.49em);
-    color: #ffffff;
     width: 45em;
     text-align: justify;
-    padding: 15px;
     border: 2px solid #ffffff;
-    // margin-left: 35vw;
-    transition: all .3 ease-in-out;
+    border-radius: 25px;
+    position: relative;
+    padding: 15px;
 }
 
+.main__about-list-element-text {
+    font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
+    @include fontSet(1.2em, 1.49em);
+    color: #ffffff;
+    animation: fade-in 2.5s;
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

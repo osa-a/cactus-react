@@ -9,8 +9,8 @@ export class AboutUs extends React.Component {
             error: null,
             isLoaded: false,
             dataAbout: [],
-            isActiveThinking: true,
-            isActiveStrategy: false,
+            isActiveThinking: false,
+            isActiveStrategy: true,
             isActiveSuccess: false,
         };
         this.handleClick = this.showDescription.bind(this);
@@ -43,8 +43,10 @@ export class AboutUs extends React.Component {
 
         const element = document.querySelector('.main__about-list-element-content');
         element.innerHTML = "";
-        element.innerHTML = text;
-
+        const textContent = document.createElement('div');
+        textContent.classList.add('main__about-list-element-text');
+        textContent.innerHTML = text;
+        element.appendChild(textContent);
     }
 
     componentDidMount() {
@@ -78,10 +80,8 @@ export class AboutUs extends React.Component {
                 <section className="main__about">
                     <div className="main__about-heading-wrapper">
                         <a href="#/" name="about"></a>
-                        <h2 className="main__about-header">
-                            OUR <span className="main__about-headers-border">
-                                AMBITION
-                                </span>
+                        <h2 className="main__about-header main__about-headers-border">
+                            OUR AMBITION
                         </h2>
                         <p className="main__about-sub-header">
                             is our weaponry
@@ -94,16 +94,18 @@ export class AboutUs extends React.Component {
                                 <div className={`${this.state.isActiveThinking ? "main__about-line--animation" : " "}`}></div>
                             </li>
                             <li className="main__about-list-element" key={dataAbout[1].name} onClick={() => this.showDescription(dataAbout[1].name, dataAbout[1].text)}>
-                                <button className="main__about-list-element-button" type="button">{dataAbout[1].name}</button>
+                                <button className={`main__about-list-element-button ${this.state.isActiveStrategy ? "default-focus" : ""}`} type="button">{dataAbout[1].name}</button>
                                 <div className={`${this.state.isActiveStrategy ? "main__about-line--animation" : ""}`}></div>
                             </li>
                             <li className="main__about-list-element" key={dataAbout[2].name} onClick={() => this.showDescription(dataAbout[2].name, dataAbout[2].text)}>
-                                <button className="main__about-list-element-button" type="button">{dataAbout[2].name}</button>
+                                <button className={`main__about-list-element-button ${this.state.isActiveSuccess ? "default-focus" : ""}`} type="button">{dataAbout[2].name}</button>
                                 <div className={`${this.state.isActiveSuccess ? "main__about-line--animation" : ""}`}></div>
                             </li>
                         </ul>
                         <div className="main__about-list-element-content">
-                            {dataAbout[0].text}
+                            <div className="main__about-list-element-text test">
+                                {dataAbout[1].text}
+                            </div>
                         </div>
                     </div>
 

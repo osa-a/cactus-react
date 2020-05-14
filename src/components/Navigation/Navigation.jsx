@@ -5,7 +5,7 @@ export class Navigation extends React.Component {
   render() {
     return (
       //сделать выдвигающийся слева меню бар на мобилах
-      <nav className="header__navigation sticky-top">
+      <nav className="header__navigation">
         <div className="header__burger"></div>
         <div className="header__logo"><a href="#home"> DECO.</a></div>
         <ul className="header__nav-list">
