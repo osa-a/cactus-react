@@ -1,30 +1,111 @@
 @import "../Main/App.scss";
 
+/*   HEADERS   */
+
 .main__about {
-    padding: 5vw 8vw;
+    padding: 5vw 8vw 10vw 8vw;
     background-color: #252424;
 }
+
+.main__about-heading-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-bottom: 5em;
+}
+
 .main__about-header {
     font-family: "OpenSans Bold", Arial, Helvetica, sans-serif;
     @include fontSet(4vw, 6vw);
     color: #ffffff;
 }
+
 .main__about-sub-header {
     font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
     @include fontSet(2vw, 4vw);
     color: #ffffff;
     width: fit-content;
-    animation: borderSliding 3s infinite;
+    padding-bottom: 5px;
+}
+
+.main__about-sub-header--padding {
+    padding-bottom: 10px;
+}
+
+.main__about-headers-border {
+    border-bottom: 4px solid $mainAccent;
+
+}
+
+/*   DESCRIPTION LIST  */
+
+.main__about-content {
+    display: flex;
+    align-items: center;
+}
+
+.main__about-list{
+    width: 45vw;
+}
+
+.main__about-list-element {
+    position: relative;
+    width: unset;
+    &:not(:last-of-type) {
+        margin-bottom: 5em;
+    }
+}
+
+.main__about-line--animation {
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    position: absolute;
+    animation: lineSliding 1s;
     background-image: linear-gradient($mainAccent, $mainAccent);
     background-position: 0% 100%;
     background-repeat: no-repeat;
 }
 
-@keyframes borderSliding {
+@keyframes lineSliding {
     0% {
-        background-size: 0% 4px;
+        background-size: 0%;
     }
     100% {
-        background-size: 100% 4px;
+        background-size: 100%;
     }
 }
+
+.main__about-list-element-button {
+    font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
+    font-size: 1.8em;
+    color: #858585;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    &:hover {
+        color: #ffffff;
+    }
+    &:focus {
+        color: #ffffff;
+    }
+}
+
+.default-focus{
+    color: #ffffff;
+}
+
+/*   DESCRIPTION   */
+
+.main__about-list-element-content {
+    font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
+    @include fontSet (1.2em, 1.49em);
+    color: #ffffff;
+    width: 45em;
+    text-align: justify;
+    padding: 15px;
+    border: 2px solid #ffffff;
+    // margin-left: 35vw;
+    transition: all .3 ease-in-out;
+}
+

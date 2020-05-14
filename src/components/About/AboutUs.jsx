@@ -8,12 +8,47 @@ export class AboutUs extends React.Component {
         this.state = {
             error: null,
             isLoaded: false,
-            dataAbout: []
+            dataAbout: [],
+            isActiveThinking: true,
+            isActiveStrategy: false,
+            isActiveSuccess: false,
         };
+        this.handleClick = this.showDescription.bind(this);
+    }
+
+    showDescription(name, text) {
+        switch (name) {
+            case 'THINKING':
+                this.setState(() => ({
+                    isActiveThinking: true,
+                    isActiveStrategy: false,
+                    isActiveSuccess: false,
+                }));
+                break;
+            case 'STRATEGY':
+                this.setState(() => ({
+                    isActiveThinking: false,
+                    isActiveStrategy: true,
+                    isActiveSuccess: false,
+                }));
+                break;
+            case 'SUCCESS':
+                this.setState(() => ({
+                    isActiveThinking: false,
+                    isActiveStrategy: false,
+                    isActiveSuccess: true,
+                }));
+                break;
+        }
+
+        const element = document.querySelector('.main__about-list-element-content');
+        element.innerHTML = "";
+        element.innerHTML = text;
+
     }
 
     componentDidMount() {
-        fetch("./dataAbout.json")
+        fetch("./data.json")
             .then(res => res.json())
             .then(
                 (result) => {
@@ -32,6 +67,7 @@ export class AboutUs extends React.Component {
     }
 
     render() {
+
         const { error, isLoaded, dataAbout } = this.state;
         if (error) {
             return <div>Error: {error.message}</div>;
@@ -41,19 +77,37 @@ export class AboutUs extends React.Component {
             return (
                 <section className="main__about">
                     <div className="main__about-heading-wrapper">
-                        <h2 className="main__about-header">OUR AMBITION</h2>
-                        <p className="main__about-sub-header">is our weaponry</p>
+                        <a href="#/" name="about"></a>
+                        <h2 className="main__about-header">
+                            OUR <span className="main__about-headers-border">
+                                AMBITION
+                                </span>
+                        </h2>
+                        <p className="main__about-sub-header">
+                            is our weaponry
+                        </p>
+                    </div>
+                    <div className="main__about-content">
+                        <ul className="main__about-list">
+                            <li className="main__about-list-element" key={dataAbout[0].name} onClick={() => this.showDescription(dataAbout[0].name, dataAbout[0].text)}>
+                                <button className={`main__about-list-element-button  ${this.state.isActiveThinking ? "default-focus" : ""}`} type="button">{dataAbout[0].name}</button>
+                                <div className={`${this.state.isActiveThinking ? "main__about-line--animation" : " "}`}></div>
+                            </li>
+                            <li className="main__about-list-element" key={dataAbout[1].name} onClick={() => this.showDescription(dataAbout[1].name, dataAbout[1].text)}>
+                                <button className="main__about-list-element-button" type="button">{dataAbout[1].name}</button>
+                                <div className={`${this.state.isActiveStrategy ? "main__about-line--animation" : ""}`}></div>
+                            </li>
+                            <li className="main__about-list-element" key={dataAbout[2].name} onClick={() => this.showDescription(dataAbout[2].name, dataAbout[2].text)}>
+                                <button className="main__about-list-element-button" type="button">{dataAbout[2].name}</button>
+                                <div className={`${this.state.isActiveSuccess ? "main__about-line--animation" : ""}`}></div>
+                            </li>
+                        </ul>
+                        <div className="main__about-list-element-content">
+                            {dataAbout[0].text}
+                        </div>
                     </div>
 
                 </section>
-
-                // <ul>
-                //   {dataAbout.map(item => (
-                //     <li key={item.name}>
-                //       {item.name}
-                //     </li>
-                //   ))}
-                // </ul>
             );
         }
     }

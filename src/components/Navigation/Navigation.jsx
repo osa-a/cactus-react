@@ -4,10 +4,10 @@ import './navigation.scss';
 export class Navigation extends React.Component {
   render() {
     return (
-      //сделать прилипающий меню-бар*
-      <nav className="header__navigation fixed-top">
+      //сделать выдвигающийся слева меню бар на мобилах
+      <nav className="header__navigation sticky-top">
         <div className="header__burger"></div>
-        <div className="header__logo">DECO.</div>
+        <div className="header__logo"><a href="#home"> DECO.</a></div>
         <ul className="header__nav-list">
           <li className="header__nav-list-item"><a href="#home">HOME</a> </li>
           <li className="header__nav-list-item"><a href="#about">ABOUT</a></li>
