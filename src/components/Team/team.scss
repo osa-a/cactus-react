@@ -1,0 +1,105 @@
+@import "../Main/App.scss";
+
+/*   HEADERS   */
+
+.main__team {
+    background-color: $sectionDarkBg;
+    padding: 5vw;
+}
+.main__team-header-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 5vw;
+}
+.main__team-header {
+    font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
+    color: $secondaryText;
+    font-size: 1.5em;
+}
+.main__team-sub-header {
+    font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
+    @include fontSet(5em, 1.5em);
+    color: $mainText;
+}
+
+/*   EMPLOYEE CARDS*/
+
+.main__team-content-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.main__team-employees {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.main__team-employee-card-wrapper {
+    cursor: pointer;
+    border-bottom: 1px solid #838383;
+    margin-bottom: 5vw;
+    &:not(:last-of-type) {
+        margin-right: 20px;
+    }
+    &:hover .main__team-employee-skills {
+        display: block;
+        animation: skillsAppear 1.5s;
+    }
+}
+
+@keyframes skillsAppear {
+    0% {
+        bottom: -15%;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        bottom: 4px;
+    }
+}
+
+.main__team-employee-card {
+    position: relative;
+}
+
+.main__team-employee-name {
+    font-family: "OpenSans Light", Arial, Helvetica, sans-serif;
+    color: $mainText;
+    @include fontSet(1.7em, 1.2em);
+}
+
+.main__tema-employee-position {
+    font-family: "OpenSans Light", Arial, Helvetica, sans-serif;
+    color: $mainAccent;
+    @include fontSet(0.9em, 1.5em);
+    margin-bottom: 5px;
+}
+
+.main__team-employee-skills {
+    display: none;
+    position: absolute;
+    font-family: "OpenSans Light", Arial, Helvetica, sans-serif;
+    @include fontSet(1em, 2em);
+    background-color: rgba(0, 0, 0, 0.7);
+    bottom: 4px;
+    width: 100%;
+    padding: 20px 20px 20px 30px;
+    color: $mainText;
+}
+
+.main__team-employee-skill--circle {
+    color: $mainAccent;
+    margin-right: 10px;
+}
+
+/*   ADAPTIVE   */
+
+// @media (max-width: 1049px) {
+//     .main__team-employee-card-wrapper {
+//         &:not(:last-of-type) {
+//             margin-right:0;
+//         }
+//     }
+// }

@@ -34,14 +34,38 @@
         }
     },
     "dataTeam": {
+        "Nancy": {
+            "name": "Nancy Drew",
+            "img": "Nancy.jpg",
+            "position": "CEO",
+            "skills": [
+                "BRANDING AND IDENTITY",
+                "LANDSCAPE DESIGN",
+                "BOTANY",
+                "ECOLOGY"
+            ]
+        },
         "Olivia": {
-            "name": "Olivia Stone"
+            "name": "Olivia Stone",
+            "img": "Olivia.jpg",
+            "position": "BOTANIST",
+            "skills": [
+                "ECOLOGY",
+                "BREEDING",
+                "BOTANY",
+                "GARDENING"
+            ]
         },
         "Josh": {
-            "name": "Josh Hills"
-        },
-        "Nancy": {
-            "name": "Nancy Drew"
+            "name": "Josh Hills",
+            "img": "Josh.jpg",
+            "position": "ART DIRECTOR",
+            "skills": [
+                "BRANDING AND IDENTITY",
+                "FLORISTRY",
+                "LANDSCAPE DESIGN",
+                "ECOLOGY"
+            ]
         }
     }
 }

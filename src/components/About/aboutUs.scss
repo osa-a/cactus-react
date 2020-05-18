@@ -15,7 +15,7 @@
 }
 
 .main__about-header {
-    font-family: "OpenSans Bold", Arial, Helvetica, sans-serif;
+    font-family:  'OpenSans Regular', Arial, Helvetica, sans-serif;
     @include fontSet(3.5em, 1.2em);
     color: $mainText;
     cursor: default;
@@ -76,7 +76,7 @@
 .main__about-list-element-button {
     font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
     font-size: 1.8em;
-    color: #858585;
+    color: $secondaryText;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -126,7 +126,7 @@
         align-items: center;
     }
     .main__about-content {
-        flex-direction: column;
+        flex-direction: column-reverse;
 
     }
     .main__about-list {
@@ -134,8 +134,10 @@
         flex-direction: row;
         justify-content: center;
         margin-right: 0;
+        margin-top: 10vw;
         margin-bottom: 5vw;
     }
+
     .main__about-list-element {
         &:not(:last-of-type) {
             margin-bottom: 0;
@@ -143,7 +145,7 @@
         }
     }
     .main__about-list-element-content {
-        max-height: 90vw;
+        max-height: 100vw;
         width: 75vw;
         overflow-y: scroll;
     }
@@ -161,9 +163,6 @@
     }
     .main__about-sub-header {
         @include fontSet(1.5em, 1.5em);
-    }
-    .main__about-list {
-        margin-bottom: 10vw;
     }
     .main__about-list-element-content{
         border-radius: 0;

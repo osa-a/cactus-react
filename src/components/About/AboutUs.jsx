@@ -46,9 +46,9 @@ export class AboutUs extends React.Component {
                     <a href="#/" name="about" className="main__about-header main__about-headers-border">
                         OUR AMBITION
                     </a>
-                    <p className="main__about-sub-header">
+                    <span className="main__about-sub-header">
                         is our weaponry
-                    </p>
+                    </span>
                 </div>
                 <div className="main__about-content">
                     <ul className="main__about-list" >

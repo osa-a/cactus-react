@@ -55,7 +55,7 @@ export default class App extends React.Component {
             <Carousel dataCarousel={dataCarousel} />
             <AboutUs dataAbout={dataAbout} />
             <Parallax />
-            {/* <Team dataTeam={dataTeam}/> */}
+            <Team dataTeam={dataTeam}/>
           </main>
           <footer></footer>
         </div>
