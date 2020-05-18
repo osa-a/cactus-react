@@ -1,7 +1,7 @@
 @import "../Main/App.scss";
 
 .main__parallax-wrapper {
-    padding: 8em 5em;
+    padding: 10vw;
     background-image: url("./img/1.jpg");
     @include backgroundSet();
     background-attachment: fixed;
@@ -25,7 +25,7 @@
     font-size: 3.5em;
     color: #ffffff;
     margin-bottom: 0.7em;
-    text-align: left;
+    text-align: center;
 }
 
 .main__parallax-description {
@@ -49,5 +49,43 @@
         border: 3px solid $mainAccent;
         border-radius: 25px;
         background-color: #21a179;
+    }
+}
+
+@media(max-width:1468px){
+    .main__parallax-info {
+        width: 70vw;
+        padding: 2.5em;
+    }
+}
+
+@media(max-width:1153px){
+    .main__parallax-header{
+        font-size: 3.2em;
+    }
+    .main__parallax-description{
+        @include fontSet(1.3em, 1.8em);
+    }
+    .main__parallax-button{
+        padding: 0.8em;
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 669px){
+    .main__parallax-info {
+        width: 80vw;
+        padding: 1em;
+    }
+    .main__parallax-header{
+        font-size: 2.2em;
+    }
+    .main__parallax-description{
+        @include fontSet(1.2em, 1.8em);
+        text-align:center ;
+    }
+    .main__parallax-button{
+        padding: 0.8em;
+        font-size: 1.3em;
     }
 }

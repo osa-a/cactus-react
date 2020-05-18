@@ -99,8 +99,7 @@
     border-radius: 5px;
     position: relative;
     padding: 15px;
-    max-height: 20vw;
-    overflow-y: auto;
+
 }
 .main__about-list-element-text {
     font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
@@ -146,6 +145,7 @@
     .main__about-list-element-content {
         max-height: 90vw;
         width: 75vw;
+        overflow-y: scroll;
     }
 }
 
