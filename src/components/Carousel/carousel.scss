@@ -15,8 +15,8 @@
 @import "../Main/App.scss";
 
 .carousel-caption {
-    margin-top: 10%;
-    margin-bottom: 10%;
+    margin-bottom: 6%;
+    z-index: 1;
 }
 
 .main__carousel-img {
@@ -25,34 +25,30 @@
 
 .main__carousel-header {
     font-family: "OpenSans Light", Arial, Helvetica, sans-serif;
-    font-size: 5em;
+    font-size: 5vw;
+    margin-bottom: 3vw;
 }
 
 .main__carousel-header--caption {
     font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
-    font-size: 2em;
+    font-size: 2vw;
     line-height: 1.6em;
+    margin-bottom: 4vw;
 }
 
 .main__carousel-button {
     font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
     background-color: transparent;
-    padding: 0.8em;
+    padding: 1vw;
     border: 3px solid;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
     color: #ffffff;
-    font-size: 1.5em;
+    font-size: 1.7vw;
     &:hover {
         border: 3px solid $mainAccent;
         border-radius: 25px;
         background-color: #21a179;
-    }
-}
-
-@media (max-width: 1213px) {
-    .main__carousel-header {
-        display: none;
     }
 }
 

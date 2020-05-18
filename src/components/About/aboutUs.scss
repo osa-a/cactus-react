@@ -4,7 +4,7 @@
 
 .main__about {
     padding: 4vw 15vw 6vw 15vw;
-    background-color: #252424;
+    background-color: $sectionDarkBg;
 }
 
 .main__about-heading-wrapper {
@@ -17,13 +17,14 @@
 .main__about-header {
     font-family: "OpenSans Bold", Arial, Helvetica, sans-serif;
     @include fontSet(3.5em, 1.2em);
-    color: #ffffff;
+    color: $mainText;
+    cursor: default;
 }
 
 .main__about-sub-header {
     font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
     @include fontSet(2em, 2em);
-    color: #ffffff;
+    color: $mainText;
     width: fit-content;
     padding-bottom: 5px;
 }
@@ -42,11 +43,9 @@
     display: flex;
     align-items: center;
 }
-
 .main__about-list {
     width: 45vw;
 }
-
 .main__about-list-element {
     position: relative;
     width: unset;
@@ -54,7 +53,6 @@
         margin-bottom: 5em;
     }
 }
-
 .main__about-line--animation {
     bottom: 0;
     width: 100%;
@@ -83,32 +81,32 @@
     border: none;
     cursor: pointer;
     &:hover {
-        color: #ffffff;
+        color: $mainText;
     }
     &:focus {
-        color: #ffffff;
+        color: $mainText;
     }
 }
-
 .default-focus {
-    color: #ffffff;
+    color: $mainText;
 }
 
 /*   DESCRIPTION   */
 
 .main__about-list-element-content {
     width: 45em;
-    text-align: justify;
-    border: 2px solid #ffffff;
-    border-radius: 25px;
+    border: 2px solid $mainBorder;
+    border-radius: 5px;
     position: relative;
     padding: 15px;
+    max-height: 20vw;
+    overflow-y: auto;
 }
-
 .main__about-list-element-text {
     font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
     @include fontSet(1.2em, 1.49em);
-    color: #ffffff;
+    text-align: justify;
+    color: $mainText;
     animation: fade-in 2.5s;
 }
 
@@ -118,5 +116,63 @@
     }
     100% {
         opacity: 1;
+    }
+}
+
+@media (max-width: 900px) {
+    .main__about {
+        padding: 6vw 3vw;
+    }
+    .main__about-heading-wrapper {
+        align-items: center;
+    }
+    .main__about-content {
+        flex-direction: column;
+
+    }
+    .main__about-list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-right: 0;
+        margin-bottom: 5vw;
+    }
+    .main__about-list-element {
+        &:not(:last-of-type) {
+            margin-bottom: 0;
+            margin-right: 5vw;
+        }
+    }
+    .main__about-list-element-content {
+        max-height: 90vw;
+        width: 75vw;
+    }
+}
+
+@media (max-width: 570px) {
+    .main__about {
+        padding: 12vw 3vw;
+    }
+    .main__about-heading-wrapper {
+        margin-bottom: 10vw;
+    }
+    .main__about-header {
+        @include fontSet(2.5em, 1em);
+    }
+    .main__about-sub-header {
+        @include fontSet(1.5em, 1.5em);
+    }
+    .main__about-list {
+        margin-bottom: 10vw;
+    }
+    .main__about-list-element-content{
+        border-radius: 0;
+    }
+    .main__about-list-element-button {
+        font-size: 1.2em;
+    }
+    .main__about-list-element-text {
+        @include fontSet(1em, 1.5em);
+        text-align: justify;
     }
 }

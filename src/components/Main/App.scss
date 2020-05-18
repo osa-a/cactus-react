@@ -6,6 +6,7 @@
 @include listReset();
 @include linkReset();
 @include headerReset();
+@include scrollbarSet();
 
 .body-container{
     max-width: 1920px;

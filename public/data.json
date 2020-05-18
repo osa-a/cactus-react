@@ -1,17 +1,47 @@
 {
-    "dataAbout": [
-        {
-            "name": "THINKING",
-            "text": "Thinking ipsum dolor sit amet consectetur adipisicing elit. Optio accusantium quas perspiciatis expedita voluptatum nemo ullam hic, debitis totam aperiam quae amet mollitia doloremque voluptates! Temporibus consequuntur magnam optio omnis? Voluptate sapiente eaque provident ut repudiandae fugiat facilis, at quae impedit soluta, exercitationem, illo obcaecati doloremque earum similique voluptatem ad recusandae enim et omnis debitis. Temporibus et pariatur omnis suscipit! Praesentium maxime et dicta repellendus perspiciatis dolorem qui unde cumque doloribus, voluptatibus tenetur, debitis harum numquam sint nobis! Tempora nesciunt incidunt ratione hic est ex perferendis qui iusto veritatis! Numquam."
+    "dataCarousel": {
+        "first": {
+            "img": "1.jpg",
+            "header": "PLANT LOVERS",
+            "sub": "Nulla vitae elit libero, a pharetra augue mollis interdum.Praesent commodo cursus magna, vel scelerisque nisl consectetur.Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
+            "link": "#work"
         },
-        {
+        "second": {
+            "img": "2.jpg",
+            "header": "PLANTS ADDICT",
+            "sub": "NNulla vitae elit libero, a pharetra augue mollis interdum.Praesent commodo cursus magna, vel scelerisque nisl consectetur.Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
+            "link": "#work"
+        },
+        "third": {
+            "img": "3.jpg",
+            "header": "INDOOR PLANTS",
+            "sub": "Nulla vitae elit libero, a pharetra augue mollis interdum.Praesent commodo cursus magna, vel scelerisque nisl consectetur.Praesent commodo cursus magna, vel scelerisque nisl consectetur.",
+            "link": "#work"
+        }
+    },
+    "dataAbout": {
+        "6j7": {
+            "name": "THINKING",
+            "text": "Thinking ipsum dolor sit amet. Optio accusantium quas perspiciatis expedita voluptatum nemo ullam hic, debitis totam aperiam quae amet mollitia doloremque voluptates! Temporibus consequuntur magnam optio omnis? Voluptate sapiente eaque provident ut repudiandae fugiat facilis, at quae impedit soluta, exercitationem, illo obcaecati doloremque earum similique voluptatem ad recusandae enim et omnis debitis. Temporibus et pariatur omnis suscipit! Praesentium maxime et dicta repellendus perspiciatis dolorem qui unde cumque doloribus, voluptatibus tenetur, debitis harum numquam sint nobis! Tempora nesciunt incidunt ratione hic est ex perferendis qui iusto veritatis! Numquam."
+        },
+        "45g": {
             "name": "STRATEGY",
             "text": "Strategy ipsum dolor, sit amet consectetur adipisicing elit. Fuga rerum qui laudantium enim dolorem. Natus ad, obcaecati ab commodi iure cupiditate illo dolorem adipisci libero assumenda qui iusto sapiente ea!Omnis distinctio dolorem non quaerat, provident animi? Quas illum nisi consequuntur, voluptas accusamus culpa neque fugit est corporis delectus iure quae magni recusandae molestiae enim iusto nostrum sit amet consectetur adipisicing elit. Fuga rerum qui laudantium enim dolorem. Natus ad, obcaecati ab commodi iure cupiditate illo dolorem adipisci libero assumenda qui iusto sapiente ea!Omnis distinctio dolorem non quaerat, provident animi? Quas illum nisi a officiis quaerat!"
         },
-        {
+        "gr09": {
             "name": "SUCCESS",
-            "text": "Success ipsum dolor sit amet, consectetur adipisicing elit. Unde nulla consequatur quam. Sequi eum laborum atque, maxime recusandae sapiente voluptates excepturi totam pariatur, harum error animi, quisquam quidem temporibus quod.Architecto, provident voluptas asperiores, dignissimos id harum aliquam fugiat eos pariatur saepe iste deleniti repudiandae obcaecati beatae, consectetur sint minus odit officia nobis suscipit at reprehenderit tenetur sit amet consectetur adipisicing elit. Fuga rerum qui laudantium enim dolorem. Natus ad, obcaecati ab commodi iure cupiditate illo dolorem adipisci libero assumenda qui iusto sapiente ea! Omnis distinctio dolorem non quaerat, provident eleniti repudiandae obcaecati beatae sdiram mari dolore culpa. Illo?"
+            "text": "Success ipsum dolor sit amet, consectetur adipisicing elit. Unde nulla consequatur quam. Sequi sapiente voluptates excepturi totam pariatur, harum error animi, quisquam quidem temporibus quod.Architecto, provident voluptas asperiores, dignissimos id harum aliquam fugiat eos pariatur saepe iste deleniti repudiandae obcaecati beatae, consectetur sint minus odit officia nobis suscipit at reprehenderit tenetur sit amet consectetur adipisicing elit. Fuga rerum qui laudantium enim dolorem. Natus ad, obcaecati ab commodi iure cupiditate illo dolorem adipisci libero assumenda qui iusto sapiente ea! Omnis distinctio dolorem non quaerat, provident eleniti repudiandae obcaecati beatae sdiram mari dolore culpa. Illo?"
         }
-    ]
+    },
+    "dataTeam": {
+        "Olivia": {
+            "name": "Olivia Stone"
+        },
+        "Josh": {
+            "name": "Josh Hills"
+        },
+        "Nancy": {
+            "name": "Nancy Drew"
+        }
+    }
 }
-

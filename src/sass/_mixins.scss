@@ -78,3 +78,20 @@
     font-style: italic;
   }
 }
+
+@mixin scrollbarSet {
+  ::-webkit-scrollbar {
+    width:5px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #4d4d4d;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 25px;
+    background: #888;
+    cursor: pointer;
+    &:hover {
+      background: rgb(190, 190, 190);
+    }
+  }
+}
