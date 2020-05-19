@@ -9,6 +9,7 @@ export class Team extends React.Component {
 
     render() {
         const dataTeam = this.props.dataTeam;
+        const dataSkills = this.props.dataSkills;
         return (
             <section className="main__team">
                 <div className="main__team-header-wrapper">
@@ -37,11 +38,37 @@ export class Team extends React.Component {
                             </div>
                         ))}
                     </div>
-                    <div className="main__team-history"></div>
-                    <div className="main__team-skills"></div>
+                    <div className="main__team-info">
+                        <div className="main__team-history">
+                            <h3 className="main__team-info--header">Our history.</h3>
+                            <p className="main__team-history--text">
+                                Ut wisi enim ad minim veniam, quis nostrud exerci
+                                tation ullamcorper suscipit lobortis nisl ut aliquip
+                                ex ea commodo consequat. Duis autem vel eum iriure dolor
+                                in hendrerit in vulputate velit esse molestie consequat
+                                vel illum dolore eu nulla facilisis at vero eros lobortis
+                                nisl ut aliquip ex ea commodo consequat tation ullamcorper
+                                suscipit lobortis nisl ut aliquip ex ea commodo consequat.
+                                </p>
+                        </div>
+                        <div className="main__team-skills-block">
+                            <h3 className="main__team-info--header">Our skills.</h3>
+                            <ul className="main__team-skill-list">
+                                {Object.keys(dataSkills).map(skill => (
+                                    <li key={skill} className="main__team-skill-element">
+                                        {dataSkills[skill].name}
+                                        <div className="main__team-skill-bar">
+                                            <div className="main__team-skill-bar--color" style={{ width: dataSkills[skill].width }}></div>
+                                        </div>
+                                        <p className="main__team-skill-bar--caption">{dataSkills[skill].width}</p>
+                                    </li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
                 </div>
 
-            </section>
+            </section >
         );
     }
 }

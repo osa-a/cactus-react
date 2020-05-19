@@ -95,7 +95,6 @@
 
 .main__about-list-element-content {
     width: 45em;
-    border: 2px solid $mainBorder;
     border-radius: 5px;
     position: relative;
     padding: 15px;
@@ -147,7 +146,7 @@
     .main__about-list-element-content {
         max-height: 100vw;
         width: 75vw;
-        overflow-y: scroll;
+        overflow-y: auto;
     }
 }
 

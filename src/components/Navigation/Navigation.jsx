@@ -10,7 +10,7 @@ export class Navigation extends React.Component {
         <div className="header__logo"><a href="#home"> DECO.</a></div>
         <ul className="header__nav-list">
           <li className="header__nav-list-item"><a href="#about">ABOUT</a></li>
-          <li className="header__nav-list-item"><a href="#team">OUR TEAM</a></li>
+          <li className="header__nav-list-item"><a href="#team">TEAM</a></li>
           <li className="header__nav-list-item"><a href="#work">WORK</a></li>
           <li className="header__nav-list-item"><a href="#services">SERVICES</a></li>
           <li className="header__nav-list-item"><a href="#contact">CONTACT</a></li>

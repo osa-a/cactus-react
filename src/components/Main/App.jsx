@@ -27,7 +27,8 @@ export default class App extends React.Component {
             isLoaded: true,
             dataCarousel: { ...result.dataCarousel },
             dataAbout: { ...result.dataAbout },
-            dataTeam: { ...result.dataTeam }
+            dataTeam: { ...result.dataTeam },
+            dataSkills: {...result.dataSkills},
           });
         },
         (error) => {
@@ -40,7 +41,7 @@ export default class App extends React.Component {
   }
 
   render() {
-    const { error, isLoaded, dataCarousel, dataAbout, dataTeam } = this.state;
+    const { error, isLoaded, dataCarousel, dataAbout, dataTeam, dataSkills } = this.state;
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
@@ -55,7 +56,7 @@ export default class App extends React.Component {
             <Carousel dataCarousel={dataCarousel} />
             <AboutUs dataAbout={dataAbout} />
             <Parallax />
-            <Team dataTeam={dataTeam}/>
+            <Team dataTeam={dataTeam} dataSkills={dataSkills} />
           </main>
           <footer></footer>
         </div>

@@ -67,5 +67,19 @@
                 "ECOLOGY"
             ]
         }
+    },
+    "dataSkills": {
+        "FLORISTRY": {
+            "name": "FLORISTRY",
+            "width": "78%"
+        },
+        "LANDSCAPE DESIGN": {
+            "name": "LANDSCAPE DESIGN",
+            "width": "65%"
+        },
+        "BOTANY": {
+            "name": "BOTANY",
+            "width": "92%"
+        }
     }
 }
