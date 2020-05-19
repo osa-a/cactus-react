@@ -1,0 +1,31 @@
+@import "../Main/App.scss";
+
+.main__counter-container {
+    padding: 9vw 5vw;
+    background-image: url("./img/1.jpg");
+    @include backgroundSet();
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+}
+
+.main__counter-element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:not(:last-of-type) {
+        margin-right: 5vw;
+    }
+}
+
+.main__counter-caption {
+    font-family: "OpenSans Light", Arial, Helvetica, sans-serif;
+    color: $mainText;
+    @include fontSet(2.3em, 2em);
+}
+
+.main__counter-number {
+    font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
+    color: $mainText;
+    @include fontSet(2em, 1em);
+}

@@ -5,6 +5,7 @@ import { Carousel } from '../Carousel/Carousel';
 import { AboutUs } from '../About/AboutUs';
 import { Parallax } from '../Parallax/Parallax';
 import { Team } from '../Team/Team';
+import { Counter } from '../Counter/Counter';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -28,7 +29,7 @@ export default class App extends React.Component {
             dataCarousel: { ...result.dataCarousel },
             dataAbout: { ...result.dataAbout },
             dataTeam: { ...result.dataTeam },
-            dataSkills: {...result.dataSkills},
+            dataSkills: { ...result.dataSkills },
           });
         },
         (error) => {
@@ -41,7 +42,14 @@ export default class App extends React.Component {
   }
 
   render() {
-    const { error, isLoaded, dataCarousel, dataAbout, dataTeam, dataSkills } = this.state;
+    const {
+      error,
+      isLoaded,
+      dataCarousel,
+      dataAbout,
+      dataTeam,
+      dataSkills
+    } = this.state;
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
@@ -57,6 +65,7 @@ export default class App extends React.Component {
             <AboutUs dataAbout={dataAbout} />
             <Parallax />
             <Team dataTeam={dataTeam} dataSkills={dataSkills} />
+            <Counter />
           </main>
           <footer></footer>
         </div>

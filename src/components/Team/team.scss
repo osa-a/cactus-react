@@ -160,3 +160,57 @@
 }
 
 /*   ADAPTIVE   */
+
+@media (max-width: 1500px) {
+    .main__team-history {
+        width: 35vw;
+    }
+    .main__team-skills-block {
+        width: 35vw;
+    }
+}
+
+@media (max-width: 1153px) {
+    .main__team-sub-header {
+        font-size: 4.5em;
+    }
+}
+
+@media (max-width: 940px) {
+    .main__team-info {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main__team-history {
+        width: 65vw;
+        margin-bottom: 45px;
+        margin-top: 25px;
+    }
+    .main__team-info-skills--header {
+        align-self: flex-end;
+    }
+    .main__team-skill-element div {
+        text-align: end;
+    }
+    .main__team-skills-block {
+        width: 65vw;
+    }
+}
+
+@media (max-width: 672px) {
+    .main__team-header {
+        font-size: 1.2em;
+    }
+    .main__team-sub-header {
+        font-size: 3.5em;
+    }
+}
+
+@media (max-width: 430px) {
+    .main__team-header {
+        font-size: 1.1em;
+    }
+    .main__team-sub-header {
+        font-size: 3em;
+    }
+}
