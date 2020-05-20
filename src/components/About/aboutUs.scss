@@ -3,19 +3,19 @@
 /*   HEADERS   */
 
 .main__about {
-    padding: 4vw 15vw 6vw 15vw;
+    padding: 4vw 8vw 6.5vw 8vw;
     background-color: $sectionDarkBg;
 }
 
 .main__about-heading-wrapper {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     margin-bottom: 4.5vw;
 }
 
 .main__about-header {
-    font-family:  'OpenSans Regular', Arial, Helvetica, sans-serif;
+    font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
     @include fontSet(3.5em, 1.2em);
     color: $mainText;
     cursor: default;
@@ -41,16 +41,20 @@
 
 .main__about-content {
     display: flex;
+    flex-direction: column-reverse;
     align-items: center;
 }
 .main__about-list {
-    width: 45vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 5vw;
 }
 .main__about-list-element {
     position: relative;
-    width: unset;
     &:not(:last-of-type) {
-        margin-bottom: 5em;
+        margin-bottom: 0;
+        margin-right: 5vw;
     }
 }
 .main__about-line--animation {
@@ -93,16 +97,12 @@
 
 /*   DESCRIPTION   */
 
-.main__about-list-element-content {
-    width: 45em;
-    border-radius: 5px;
+.main__about-list-element-text {
+    width: 50vw;
     position: relative;
     padding: 15px;
-
-}
-.main__about-list-element-text {
     font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
-    @include fontSet(1.2em, 1.49em);
+    @include fontSet(1.2em, 1.8em);
     text-align: justify;
     color: $mainText;
     animation: fade-in 2.5s;
@@ -117,36 +117,20 @@
     }
 }
 
-@media (max-width: 900px) {
-    .main__about {
-        padding: 6vw 3vw;
-    }
-    .main__about-heading-wrapper {
-        align-items: center;
-    }
-    .main__about-content {
-        flex-direction: column-reverse;
-
-    }
-    .main__about-list {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        margin-right: 0;
-        margin-top: 10vw;
-        margin-bottom: 5vw;
-    }
-
-    .main__about-list-element {
-        &:not(:last-of-type) {
-            margin-bottom: 0;
-            margin-right: 5vw;
-        }
-    }
-    .main__about-list-element-content {
+@media (max-width: 1500px) {
+    .main__about-list-element-text{
         max-height: 100vw;
         width: 75vw;
         overflow-y: auto;
+    }
+}
+
+@media (max-width: 770px) {
+    .main__about {
+        padding-bottom: 10vw;
+    }
+    .main__about-list-element-button {
+        font-size: 1.4em;
     }
 }
 
@@ -163,14 +147,25 @@
     .main__about-sub-header {
         @include fontSet(1.5em, 1.5em);
     }
-    .main__about-list-element-content{
-        border-radius: 0;
-    }
     .main__about-list-element-button {
         font-size: 1.2em;
     }
     .main__about-list-element-text {
         @include fontSet(1em, 1.5em);
         text-align: justify;
+    }
+}
+
+@media (max-width: 470px) {
+    .main__about-list {
+        flex-wrap: wrap;
+    }
+    .main__about-list-element-button {
+        margin-top: 25px;
+    }
+    .main__about-list-element {
+        &:not(:last-of-type) {
+            margin-right: 0;
+        }
     }
 }

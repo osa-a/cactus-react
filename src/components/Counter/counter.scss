@@ -1,7 +1,7 @@
 @import "../Main/App.scss";
 
 .main__counter-container {
-    padding: 9vw 5vw;
+    padding: 9vw 2vw;
     background-image: url("./img/1.jpg");
     @include backgroundSet();
     background-attachment: fixed;
@@ -19,6 +19,7 @@
 }
 
 .main__counter-caption {
+    text-align: center;
     font-family: "OpenSans Light", Arial, Helvetica, sans-serif;
     color: $mainText;
     @include fontSet(2.3em, 2em);
@@ -28,4 +29,60 @@
     font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
     color: $mainText;
     @include fontSet(2em, 1em);
+}
+
+/*   ADAPTIVE   */
+
+@media (max-width: 1170px) {
+    .main__counter-caption {
+        @include fontSet(2em, 2em);
+    }
+    .main__counter-number {
+        @include fontSet(1.8em, 1.5em);
+    }
+}
+
+@media (max-width: 985px) {
+    .main__counter-caption {
+        @include fontSet(1.6em, 2em);
+    }
+    .main__counter-number {
+        @include fontSet(1.5em, 1.8em);
+    }
+}
+
+@media (max-width: 770px) {
+    .main__counter-element {
+        width: 40vw;
+        &:not(:last-of-type) {
+            margin-right: 1vw;
+        }
+        margin-bottom: 12vw;
+    }
+    .main__counter-container {
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+        padding-bottom: 0;
+    }
+    .main__counter-caption {
+        @include fontSet(1.4em, 1.8em);
+    }
+    .main__counter-number {
+        @include fontSet(1.2em, 1.5em);
+    }
+}
+
+@media (max-width: 620px) {
+    .main__counter-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main__counter-element {
+        width: 85vw;
+        &:not(:last-of-type) {
+            margin-right: 0;
+            margin-bottom: 15vw;
+        }
+    }
 }

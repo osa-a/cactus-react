@@ -37,7 +37,7 @@ export class Team extends React.Component {
                     </div>
                     <div className="main__team-info">
                         <div className="main__team-history">
-                            <h3 className="main__team-info--header">Our history.</h3>
+                            <h3 className="main__team-info--header main__team-info-history-header">Our history.</h3>
                             <p className="main__team-history--text">
                                 Ut wisi enim ad minim veniam, quis nostrud exerci
                                 tation ullamcorper suscipit lobortis nisl ut aliquip

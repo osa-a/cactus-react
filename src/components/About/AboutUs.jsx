@@ -9,6 +9,7 @@ export class AboutUs extends React.Component {
             '6j7': false,
             '45g': true,
             'gr09': false,
+            '8g9': false
         };
         this.handleClick = this.switchDescription.bind(this);
     }
@@ -52,7 +53,7 @@ export class AboutUs extends React.Component {
                 </div>
                 <div className="main__about-content">
                     <ul className="main__about-list" >
-                        {Object.keys(dataAbout).map(item => (
+                        {Object.keys(dataAbout).map((item) => (
                             <li key={item} className="main__about-list-element" onClick={(e) => this.switchDescription(e, dataAbout[item].text)}>
                                 <button data-id={item} className={`${this.state[item] ? "default-focus" : ""} main__about-list-element-button`} type="button">
                                     {dataAbout[item].name}
@@ -63,7 +64,7 @@ export class AboutUs extends React.Component {
                     </ul>
                     <div className="main__about-list-element-content">
                         <div className="main__about-list-element-text">
-                            {dataAbout['45g'].text}
+                            {dataAbout['6j7'].text}
                         </div>
                     </div>
                 </div>

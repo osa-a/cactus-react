@@ -99,6 +99,8 @@
 }
 
 .main__team-history {
+    display: flex;
+    flex-direction: column;
     color: $mainText;
     width: 25vw;
 }
@@ -186,14 +188,13 @@
         margin-bottom: 45px;
         margin-top: 25px;
     }
+
     .main__team-info-skills--header {
         align-self: flex-end;
     }
-    .main__team-skill-element div {
-        text-align: end;
-    }
     .main__team-skills-block {
         width: 65vw;
+        margin-bottom: 6vw;
     }
 }
 
@@ -203,6 +204,13 @@
     }
     .main__team-sub-header {
         font-size: 3.5em;
+    }
+
+}
+
+@media(max-width:500px){
+    .main__team-info-history-header{
+        align-self: flex-end;
     }
 }
 
