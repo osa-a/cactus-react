@@ -1,0 +1,65 @@
+@import "../Main/App.scss";
+
+.main__gallery-element-container {
+    display: flex;
+    justify-content: center;
+}
+
+.main__gallery-element {
+    cursor: pointer;
+    position: relative;
+    border-radius: 15px;
+    border: 4px solid transparent;
+    transition: all 0.4s ease-in-out;
+    &:hover {
+        border: 4px solid $mainAccent;
+        .main__gallery-element-text {
+            display: block;
+        }
+        .main__gallery-element-img{
+            filter: brightness(50%);
+        }
+    }
+}
+
+.main__gallery-element-text {
+    font-family: 'OpenSans Light', Arial, Helvetica, sans-serif;
+    display: none;
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    max-width: 200px;
+    color: $mainText;
+}
+
+.main__gallery-element-header{
+font-size: 2em;
+}
+.main__gallery-element-caption{
+    font-size: 1em;
+}
+.main__gallery-element-img {
+    transition: all 0.4s ease-in-out;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.main__gallery-element-description {
+    display: none;
+    font-family: 'OpenSans Regular', Arial, Helvetica, sans-serif;
+    @include fontSet(1em, 1.8em);
+    position: absolute;
+    top: 10%;
+    right: -50%;
+    padding: 10px;
+    color: $mainText;
+    max-width: 250px;
+    border: 2px solid $mainAccent;
+    border-radius:15px;
+    background-color: #5c5c5c;
+    z-index: 10;
+}
+
+.main__gallery-element-description--show{
+display: block;
+}

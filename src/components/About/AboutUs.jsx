@@ -11,7 +11,6 @@ export class AboutUs extends React.Component {
             'gr09': false,
             '8g9': false
         };
-        this.handleClick = this.switchDescription.bind(this);
     }
 
     switchDescription(event, text) {
@@ -31,6 +30,7 @@ export class AboutUs extends React.Component {
                 }));
             }
         }
+
         const elementContent = document.querySelector('.main__about-list-element-content');
         elementContent.innerHTML = "";
         const textContent = document.createElement('div');

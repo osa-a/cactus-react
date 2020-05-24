@@ -1,0 +1,44 @@
+@import '../Main/App.scss';
+
+.main__gallery{
+    padding: 5vw 10vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background-color: $sectionDarkBg;
+    flex-grow: 1;
+}
+
+.main__gallery-head{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+}
+
+.main__gallery-header{
+    font-family: 'OpenSans Regular', Arial, Helvetica, sans-serif;
+    @include fontSet(4em, 1.2em);
+    color: $mainText;
+    margin-bottom: 45px;
+    border-bottom: 4px solid $mainAccent;
+    text-align: center;
+}
+
+.main__gallery-filters{
+    display: flex;
+    margin-bottom: 40px;
+}
+
+.main__gallery-filter{
+    font-family: 'OpenSans Regular', Arial, Helvetica, sans-serif;
+    @include fontSet(1.5em, 1em);
+    color: $secondaryText;
+    cursor: pointer;
+    &:not(:last-of-type){
+        margin-right: 30px;
+    }
+}
+
+.main__gallery-filter--active{
+    color:$mainText;
+}

@@ -28,7 +28,7 @@
             "name": "STRATEGY",
             "text": "Strategy ipsum dolor, sit amet consectetur adipisicing elit. Fuga rerum qui laudantium enim dolorem. Natus ad, obcaecati ab commodi iure cupiditate illo dolorem adipisci libero assumenda qui iusto sapiente ea!Omnis distinctio dolorem non quaerat, provident animi? Quas illum nisi consequuntur, voluptas accusamus culpa neque fugit est corporis delectus iure quae magni recusandae molestiae enim iusto nostrum sit amet consectetur adipisicing elit. Fuga rerum qui laudantium enim dolorem. Natus ad, obcaecati ab commodi iure cupiditate illo dolorem adipisci libero assumenda qui iusto sapiente ea!Omnis distinctio dolorem non quaerat, provident animi? Quas illum nisi a officiis quaerat!"
         },
-        "8g9":{
+        "8g9": {
             "name": "ACTION",
             "text": "Action ipsum dolor sit amet, consectetur adipisicing elit. Unde nulla consequatur quam. Sequi sapiente voluptates excepturi totam pariatur, harum error animi, quisquam quidem temporibus quod.Architecto, provident voluptas asperiores, dignissimos id harum aliquam fugiat eos pariatur saepe iste deleniti repudiandae obcaecati beatae, consectetur sint minus odit officia nobis suscipit at reprehenderit tenetur sit amet consectetur adipisicing elit. Fuga rerum qui laudantium enim dolorem. Natus ad, obcaecati ab commodi iure cupiditate illo dolorem adipisci libero assumenda qui iusto sapiente ea! Omnis distinctio dolorem non quaerat, provident eleniti repudiandae obcaecati beatae sdiram mari dolore culpa. Illo?"
         },
@@ -84,6 +84,104 @@
         "BOTANY": {
             "name": "BOTANY",
             "width": "92%"
+        }
+    },
+    "dataGallery": {
+        "5yj": {
+            "id": "5yj",
+            "name": "Puffbird",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit adipisci ratione quidem ipsa, velit itaque alias magnam fugit repellat eius molestiae, quisquam delectus soluta ex odit qui! Est, nobis accusamus.",
+            "size": "5x3cm",
+            "type": "cactus",
+            "pot": "yes"
+        },
+        "6j": {
+            "id": "6j",
+            "name": "Long Chong",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit adipisci ratione quidem ipsa, velit itaque alias magnam fugit repellat eius molestiae, quisquam delectus soluta ex odit qui! Est, nobis accusamus.",
+            "size": "10x5cm",
+            "type": "cactus",
+            "pot": "yes"
+        },
+        "7uik": {
+            "id": "7uik",
+            "name": "Succulent Bowl",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit adipisci ratione quidem ipsa, velit itaque alias magnam fugit repellat eius molestiae, quisquam delectus soluta ex odit qui! Est, nobis accusamus.",
+            "size": "15x15cm",
+            "type": "succulent",
+            "pot": "yes"
+        },
+        "w3": {
+            "id": "w3",
+            "name": "Harvey",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit adipisci ratione quidem ipsa, velit itaque alias magnam fugit repellat eius molestiae, quisquam delectus soluta ex odit qui! Est, nobis accusamus.",
+            "size": "10x5cm",
+            "type": "succulent",
+            "pot": "yes"
+        },
+        "65": {
+            "id": "65",
+            "name": "Alex",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit adipisci ratione quidem ipsa, velit itaque alias magnam fugit repellat eius molestiae, quisquam delectus soluta ex odit qui! Est, nobis accusamus.",
+            "size": "30x40cm",
+            "type": "plant",
+            "pot": "yes"
+        },
+        "87mk": {
+            "id": "87mk",
+            "name": "Hydrangea",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit adipisci ratione quidem ipsa, velit itaque alias magnam fugit repellat eius molestiae, quisquam delectus soluta ex odit qui! Est, nobis accusamus.",
+            "size": "30cm",
+            "type": "flower",
+            "vase": "no"
+        },
+        "fes": {
+            "id": "fes",
+            "name": "Fes",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit adipisci ratione quidem ipsa, velit itaque alias magnam fugit repellat eius molestiae, quisquam delectus soluta ex odit qui! Est, nobis accusamus.",
+            "size": "25x15cm",
+            "type": "plant",
+            "pot": "yes"
+        },
+        "ygj": {
+            "id": "ygj",
+            "name": "Kara",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit adipisci ratione quidem ipsa, velit itaque alias magnam fugit repellat eius molestiae, quisquam delectus soluta ex odit qui! Est, nobis accusamus.",
+            "size": "28x10cm",
+            "type": "plant",
+            "pot": "yes"
+        },
+        "9c": {
+            "id": "9c",
+            "name": "Tiny Friend",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit adipisci ratione quidem ipsa, velit itaque alias magnam fugit repellat eius molestiae, quisquam delectus soluta ex odit qui! Est, nobis accusamus.",
+            "size": "3x2cm",
+            "type": "succulent",
+            "pot": "yes"
+        },
+        "w4": {
+            "id": "w4",
+            "name": "Peony",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit adipisci ratione quidem ipsa, velit itaque alias magnam fugit repellat eius molestiae, quisquam delectus soluta ex odit qui! Est, nobis accusamus.",
+            "size": "40cm",
+            "type": "flower",
+            "vase": "no"
+        },
+        "5b": {
+            "id": "5b",
+            "name": "Flower Mini",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit adipisci ratione quidem ipsa, velit itaque alias magnam fugit repellat eius molestiae, quisquam delectus soluta ex odit qui! Est, nobis accusamus.",
+            "size": "3x5cm",
+            "type": "cactus",
+            "pot": "yes"
+        },
+        "mh": {
+            "id": "mh",
+            "name": "Iris",
+            "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit adipisci ratione quidem ipsa, velit itaque alias magnam fugit repellat eius molestiae, quisquam delectus soluta ex odit qui! Est, nobis accusamus.",
+            "size": "40cm",
+            "type": "flower",
+            "vase": "no"
         }
     }
 }
