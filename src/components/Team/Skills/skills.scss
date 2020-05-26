@@ -1,0 +1,57 @@
+@import '../../Main/App.scss';
+
+.main__team-skills-block {
+    display: flex;
+    flex-direction: column;
+    width: 25vw;
+}
+
+.main__team-skill-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.main__team-skill-element {
+    font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
+    color: $mainText;
+    @include fontSet(0.9em, 2em);
+    margin-bottom: 1vw;
+}
+
+.main__team-skill-bar {
+    background-color: #838383;
+}
+
+.main__team-skill-bar--color {
+    height: 5px;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+        90deg,
+        rgba(0, 0, 0, 0.7315301120448179) 0%,
+        rgba(33, 161, 121, 0.9752275910364145) 57%,
+        $mainAccent
+    );
+}
+
+.main__team-skill-bar--caption {
+    display: flex;
+    align-self: flex-end;
+}
+
+/*   ADAPTIVE   */
+
+@media (max-width: 1500px) {
+    .main__team-skills-block {
+        width: 35vw;
+    }
+}
+
+@media (max-width: 940px) {
+    .main__team-info-skills--header {
+        align-self: flex-end;
+    }
+    .main__team-skills-block {
+        width: 65vw;
+        margin-bottom: 6vw;
+    }
+}

@@ -1,0 +1,49 @@
+@import '../../Main/App.scss';
+
+.main__team-info {
+    display: flex;
+    justify-content: space-around;
+}
+
+.main__team-history {
+    display: flex;
+    flex-direction: column;
+    color: $mainText;
+    width: 25vw;
+}
+
+.main__team-info--header {
+    font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
+    color: $mainText;
+    margin-bottom: 25px;
+    font-size: 2em;
+}
+
+.main__team-history--text {
+    font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
+    color: $mainText;
+    text-align: justify;
+    @include fontSet(1em, 2em);
+}
+
+/* ADAPTIVE*/
+
+@media (max-width: 1500px) {
+    .main__team-history {
+        width: 35vw;
+    }
+}
+
+@media (max-width: 940px) {
+    .main__team-history {
+        width: 65vw;
+        margin-bottom: 45px;
+        margin-top: 25px;
+    }
+}
+
+@media(max-width:500px){
+    .main__team-info-history-header{
+        align-self: flex-end;
+    }
+}

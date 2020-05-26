@@ -1,6 +1,6 @@
 import React from 'react';
 import Grid from '@material-ui/core/Grid';
-import GalleryElement from '../GalleryElement/GalleryElement';
+import GalleryElement from './GalleryElement/GalleryElement';
 import './gallery.scss';
 
 export class Gallery extends React.Component {
