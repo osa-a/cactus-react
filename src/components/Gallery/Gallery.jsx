@@ -93,15 +93,21 @@ export class Gallery extends React.Component {
         if (!filterName) {
             return;
         }
+        let finalData;
 
         this.filterSwitcher(data, filterName);
-        let finalData = Object.keys(data)
-            .filter(element => data[element].type === filterName)
-            .map((element) => {
-                return data[element];
-            });
-            console.log(finalData)
-            this.setState({ finalData: finalData});
+
+        if (filterName === 'all') {
+            finalData = this.props.dataGallery;
+        } else {
+            finalData = Object.keys(data)
+                .filter(element => data[element].type === filterName)
+                .map((element) => {
+                    return data[element];
+                });
+        }
+        this.setState({ finalData: finalData });
+
         return finalData;
     }
 
@@ -146,7 +152,7 @@ export class Gallery extends React.Component {
                         <Grid key={element} item xs className="main__gallery-element-container">
                             <GalleryElement
                                 id={element}
-                                img = {finalData[element].id}
+                                img={finalData[element].id}
                                 name={finalData[element].name}
                                 description={finalData[element].description}
                                 caption={finalData[element].type}
