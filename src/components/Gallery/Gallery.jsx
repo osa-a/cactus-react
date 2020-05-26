@@ -2,7 +2,6 @@ import React from 'react';
 import Grid from '@material-ui/core/Grid';
 import GalleryElement from '../GalleryElement/GalleryElement';
 import './gallery.scss';
-// import { render } from '@testing-library/react';
 
 export class Gallery extends React.Component {
     constructor(props) {
@@ -58,20 +57,26 @@ export class Gallery extends React.Component {
         }
     }
 
-    filterSwitcher(data, filterName) {
-        let filtersArr = Object.keys(data)
+    getFilters(data) {
+        let filtersArray = Object.keys(data)
             .filter((element) => data[element].type)
             .map((element) => {
                 return data[element].type;
             });
-        filtersArr = filtersArr.reduce((unique, item) => {
+        filtersArray = filtersArray.reduce((unique, item) => {
             return unique.includes(item) ? unique : [...unique, item]
         }, []);
+        return filtersArray;
+    }
 
-        for (let key in filtersArr) {
-            if (filterName === filtersArr[key]) {
+    filterSwitcher(data, filterName) {
+
+        let filtersArray = this.getFilters(data);
+
+        for (let key in filtersArray) {
+            if (filterName === filtersArray[key]) {
                 this.setState(() => ({
-                    [filtersArr[key]]: true,
+                    [filtersArray[key]]: true,
                     'all': false
                 }));
             }
@@ -82,7 +87,7 @@ export class Gallery extends React.Component {
                     }));
                 }
                 this.setState(() => ({
-                    [filtersArr[key]]: false,
+                    [filtersArray[key]]: false,
                 }));
             }
         }
@@ -111,9 +116,15 @@ export class Gallery extends React.Component {
         return finalData;
     }
 
+    toUpp(string) {
+        if (!string) return string;
+        return string[0].toUpperCase() + string.slice(1);
+    }
+
     render() {
         let dataGallery = this.props.dataGallery;
         let finalData = this.state.finalData;
+        let filters = this.getFilters(dataGallery);
         return (
             <section className="main__gallery" onClick={(e) => this.description(e)}>
                 <div className="main__gallery-head">
@@ -124,26 +135,13 @@ export class Gallery extends React.Component {
                             className={`main__gallery-filter main__gallery-filter-all  ${this.state.all ? "main__gallery-filter--active" : ""}`} >
                             All
                     </div>
-                        <div
-                            data-filter="plant"
-                            className={`main__gallery-filter main__gallery-filter-plants  ${this.state.plant ? "main__gallery-filter--active" : ""}`}>
-                            Plants
-                    </div>
-                        <div
-                            data-filter="succulent"
-                            className={`main__gallery-filter main__gallery-filter-succulents  ${this.state.succulent ? "main__gallery-filter--active" : ""}`}>
-                            Succulents
-                    </div>
-                        <div
-                            data-filter="cactus"
-                            className={`main__gallery-filter main__gallery-filter-cactuses  ${this.state.cactus ? "main__gallery-filter--active" : ""}`}>
-                            Cactuses
-                    </div>
-                        <div
-                            data-filter="flower"
-                            className={`main__gallery-filter main__gallery-filter-flowers  ${this.state.flower ? "main__gallery-filter--active" : ""}`}>
-                            Flowers
-                    </div>
+                        {filters.map((filter) => (
+                            <div
+                                data-filter={filter} key={filter}
+                                className={`main__gallery-filter main__gallery-filter-${filter}  ${this.state[filter] ? "main__gallery-filter--active" : ""}`} >
+                                {this.toUpp(filter)}
+                            </div>
+                        ))}
                     </div>
                 </div>
 
