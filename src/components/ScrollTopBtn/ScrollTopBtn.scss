@@ -18,6 +18,7 @@ body{
 }
 
 .body__scroll-top-btn {
+    opacity: 0;
     cursor: pointer;
     font-size: 40px;
     border: 2px solid;
@@ -40,4 +41,8 @@ body{
     60% { transform: translateY(4px); }
     80% { transform: translateY(-2px); }
     100% { transform: translateY(0); }
+  }
+
+  .body__scroll-top-btn--show{
+      opacity: 1;
   }

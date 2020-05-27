@@ -61,7 +61,7 @@ export default class App extends React.Component {
     } else {
       return (
         <div>
-          <ScrollTopBtn />
+          <ScrollTopBtn showUnder={200}/>
           <header className="header">
             <Navigation />
           </header>
