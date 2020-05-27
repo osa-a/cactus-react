@@ -1,0 +1,43 @@
+@import "../Main/App.scss";
+
+body{
+    position: relative;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+    height: 100%;
+}
+
+.body__scroll-top-btn-position {
+    position: fixed;
+    z-index: 20;
+    bottom: 4%;
+    left: 2%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.body__scroll-top-btn {
+    cursor: pointer;
+    font-size: 40px;
+    border: 2px solid;
+    border-radius: 50%;
+    width: 55px;
+    height: 55px;
+    color: #888888;
+    transition: all 0.3s ease-in-out;
+    &:hover {
+        border-color:  $mainAccent;
+        color: #d3d3d3;
+        animation: bounce 1s ease;
+        animation-iteration-count: 1;
+    }
+}
+
+@keyframes bounce {
+    20% { transform: translateY(6px); }
+    40% { transform: translateY(-6px); }
+    60% { transform: translateY(4px); }
+    80% { transform: translateY(-2px); }
+    100% { transform: translateY(0); }
+  }

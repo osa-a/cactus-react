@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.scss';
+import { ScrollTopBtn } from '../ScrollTopBtn/ScrollTopBtn';
 import { Navigation } from '../Navigation/Navigation';
 import { Carousel } from '../Carousel/Carousel';
 import { AboutUs } from '../About/AboutUs';
@@ -60,10 +61,11 @@ export default class App extends React.Component {
     } else {
       return (
         <div>
+          <ScrollTopBtn />
           <header className="header">
             <Navigation />
           </header>
-          <main className="main">
+          <main className="main" >
             <Carousel dataCarousel={dataCarousel} />
             <AboutUs dataAbout={dataAbout} />
             <Parallax />

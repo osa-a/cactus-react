@@ -7,7 +7,7 @@ export class Navigation extends React.Component {
       //сделать выдвигающийся слева меню бар на мобилах
       <nav className="header__navigation">
         <div className="header__burger"></div>
-        <div className="header__logo"><a href="#home"> DECO.</a></div>
+        <div className="header__logo"><a href="#home" name="home"> DECO.</a></div>
         <ul className="header__nav-list">
           <li className="header__nav-list-item"><a href="#about">ABOUT</a></li>
           <li className="header__nav-list-item"><a href="#team">TEAM</a></li>
