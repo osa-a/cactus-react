@@ -23,19 +23,17 @@
 
 .main__about-sub-header {
     font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
-    @include fontSet(2em, 2em);
-    color: $mainText;
+    @include fontSet(1.6em, 2em);
+    color: $secondaryText;
     width: fit-content;
     padding-bottom: 5px;
+    border-bottom: 4px solid $mainAccent;
 }
 
 .main__about-sub-header--padding {
     padding-bottom: 10px;
 }
 
-.main__about-headers-border {
-    border-bottom: 4px dashed $mainAccent;
-}
 
 /*   DESCRIPTION LIST  */
 

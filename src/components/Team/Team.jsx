@@ -11,8 +11,9 @@ export class Team extends React.Component {
         return (
             <section className="main__team">
                 <div className="main__team-header-wrapper">
-                    <a href="#/" name="team" className="main__team-header">SMALL, FRIENDLY AND</a>
-                    <span className="main__team-sub-header"> TALENTED</span>
+                    <a href="#/" name="team" className="main__team-header"> TALENTED</a>
+                    <span className="main__team-sub-header">SMALL, FRIENDLY AND</span>
+
                 </div>
                 <div className="main__team-content-wrapper">
                     <Employee dataTeam={dataTeam} />

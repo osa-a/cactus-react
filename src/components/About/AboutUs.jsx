@@ -44,11 +44,11 @@ export class AboutUs extends React.Component {
         return (
             <section className="main__about">
                 <div className="main__about-heading-wrapper">
-                    <a href="#/" name="about" className="main__about-header main__about-headers-border">
+                    <a href="#/" name="about" className="main__about-header">
                         OUR AMBITION
                     </a>
                     <span className="main__about-sub-header">
-                        is our weaponry
+                        IS OUR WEAPONRY
                     </span>
                 </div>
                 <div className="main__about-content">

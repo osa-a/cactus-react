@@ -1,0 +1,38 @@
+@import '../Main/App.scss';
+
+.main__plans-container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 5vw;
+    background-attachment: fixed;
+    background-image:linear-gradient(180deg, rgba(0, 0, 0, 0.726) 55%, rgba(81, 81, 81, 0) 95%), 
+    url('./img/1.jpg');
+    @include backgroundSet();
+}
+
+.main__plans-head{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__plans-header{
+    font-family: 'OpenSans Regular', Arial, Helvetica, sans-serif;
+    @include fontSet(4em, 1.7em);
+    color: $mainText;
+    cursor: default;
+}
+
+.main__plans-sub-header{
+    font-family: 'OpenSans Regular', Arial, Helvetica, sans-serif;
+    @include fontSet(1.6em, 1.3em);
+    color: #929292;
+    margin-bottom: 4vw;
+    border-bottom: 4px solid $mainAccent;
+}
+
+.main__plans-card-wrapper{
+    display: flex;
+    justify-content: space-around;
+}

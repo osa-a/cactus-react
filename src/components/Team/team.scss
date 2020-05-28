@@ -7,20 +7,22 @@
     padding: 5vw;
 }
 .main__team-header-wrapper {
+    font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-bottom: 5vw;
 }
 .main__team-header {
-    font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
-    color: $secondaryText;
-    font-size: 1.5em;
-}
-.main__team-sub-header {
-    font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
     @include fontSet(5em, 1.5em);
     color: $mainText;
+}
+
+.main__team-sub-header {
+    color: $secondaryText;
+    font-size: 1.6em;
+    padding-bottom: 5px;
+    border-bottom: 4px solid $mainAccent;
 }
 
 /*   EMPLOYEE CONTENT*/

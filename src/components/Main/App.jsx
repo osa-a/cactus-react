@@ -8,6 +8,7 @@ import { Parallax } from '../Parallax/Parallax';
 import { Team } from '../Team/Team';
 import { Counter } from '../Counter/Counter';
 import { Gallery } from '../Gallery/Gallery';
+import { PlanSection } from '../PlansSection/PlanSection';
 
 export default class App extends React.Component {
   constructor(props) {
@@ -18,6 +19,7 @@ export default class App extends React.Component {
       dataCarousel: {},
       dataAbout: {},
       dataTeam: {},
+      dataPlans: {},
     };
   }
 
@@ -33,6 +35,7 @@ export default class App extends React.Component {
             dataTeam: { ...result.dataTeam },
             dataSkills: { ...result.dataSkills },
             dataGallery: { ...result.dataGallery },
+            dataPlans: { ...result.dataPlans },
           });
         },
         (error) => {
@@ -52,7 +55,8 @@ export default class App extends React.Component {
       dataAbout,
       dataTeam,
       dataSkills,
-      dataGallery
+      dataGallery,
+      dataPlans
     } = this.state;
     if (error) {
       return <div>Error: {error.message}</div>;
@@ -61,7 +65,7 @@ export default class App extends React.Component {
     } else {
       return (
         <div>
-          <ScrollTopBtn showUnder={200}/>
+          <ScrollTopBtn showUnder={200} />
           <header className="header">
             <Navigation />
           </header>
@@ -72,6 +76,7 @@ export default class App extends React.Component {
             <Team dataTeam={dataTeam} dataSkills={dataSkills} />
             <Counter />
             <Gallery dataGallery={dataGallery} />
+            <PlanSection dataPlans={dataPlans}/>
           </main>
           <footer></footer>
         </div>

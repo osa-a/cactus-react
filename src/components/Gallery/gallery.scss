@@ -12,7 +12,7 @@
 .main__gallery-head{
     display: flex;
     flex-direction: column;
-    align-content: center;
+    align-items: center;
 }
 
 .main__gallery-header{
@@ -22,6 +22,8 @@
     margin-bottom: 45px;
     border-bottom: 4px solid $mainAccent;
     text-align: center;
+    width: fit-content;
+    cursor: default;
 }
 
 .main__gallery-filters{

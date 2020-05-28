@@ -1,0 +1,57 @@
+@import "../../Main/App.scss";
+
+.main__plan-card {
+    font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5vw 6vw;
+    background-color: $sectionDarkBg;
+    transition: all .4s ease-in-out;
+    border-top: 3px solid transparent;
+    &:hover {
+        border-top: 3px solid $mainAccent;
+        .main__plan-card-select-button {
+            border-radius: 15px;
+            border-color: $mainAccent;
+        }
+    }
+}
+
+.main__plan-card-header {
+    @include fontSet(1.8em, 2.5em);
+    color: $mainText;
+}
+
+.main__plan-card-price {
+    color: $mainText;
+    font-size: 3.5em;
+    margin-bottom: 1vw;
+}
+
+.main__plan-card-price--dollar {
+    vertical-align: super;
+    color: $mainAccent;
+}
+
+.main__plan-card-price--month {
+    font-size: 0.5em;
+    color: $mainAccent;
+}
+
+.main__plan-card-description-container {
+    @include fontSet(1.2em, 3em);
+    color: $mainText;
+    margin-bottom: 2.5vw;
+    text-align: center;
+}
+
+.main__plan-card-select-button {
+    background-color: transparent;
+    border: 3px solid #ffffff;
+    font-size: 1em;
+    color: $mainText;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: all 0.4s ease-in-out;
+}
