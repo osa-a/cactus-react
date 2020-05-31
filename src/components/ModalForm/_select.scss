@@ -1,0 +1,40 @@
+.main__subscription-form-selections-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 1vw;
+}
+
+.main__subscription-form-select-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &:not(:last-of-type) {
+        margin-right: 15px;
+    }
+}
+
+.main__subscription-form-select-label {
+    color: $mainText;
+    margin-bottom: 5px;
+}
+
+.main__subscription-form-payment-header{
+    color: $mainText;
+    margin-top: 2vw;
+    margin-bottom: 1vw;
+}
+
+.main__subscription-form-select {
+    font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
+    width: 9vw;
+    padding: 5px;
+    border-radius: 10px;
+    background-color: transparent;
+    color: $mainText;
+    cursor: pointer;
+    &:focus {
+        background-color: $sectionDarkBg;
+    }
+}
+

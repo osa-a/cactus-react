@@ -1,0 +1,54 @@
+.main__subscription-form-button {
+    cursor: pointer;
+    background-color: transparent;
+    color: $mainText;
+    transition: all 0.3s ease-in;
+}
+
+.main__subscription-form-close-button {
+    font-size: 7px;
+    border: 1px solid $mainBorder;
+    border-radius: 50%;
+    &:hover {
+        border: 1px solid transparent;
+        background-color: #a71616;
+    }
+}
+
+.main__subscription-form-close-button-position {
+    display: flex;
+    align-self: flex-end;
+    padding-top: 6px;
+    padding-left: 8px;
+    width: 25px;
+    height: 25px;
+    margin-bottom: 1vw;
+}
+
+.main__subscription-form-buttons-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.main__subscription-form-subscribe-button {
+    font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
+    border: 2px solid #ffffff;
+    padding: 8px;
+    transition: all 0.4s ease-in-out;
+    margin-right: 10px;
+    font-size: 15px;
+    &:hover {
+        border-radius: 10px;
+        border-color: $mainAccent;
+    }
+}
+
+.main__subscription-form-reset-button {
+    font-size: 25px;
+    border: none;
+    width: fit-content;
+    &:hover {
+        color: $mainAccent;
+    }
+}

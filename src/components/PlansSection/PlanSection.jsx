@@ -3,14 +3,12 @@ import './PlanSection.scss';
 import { PlanCard } from './PlanCard/PlanCard.jsx';
 
 export class PlanSection extends React.Component {
-    constructor(props) {
-        super(props);
-    }
 
     render() {
         const dataPlans = this.props.dataPlans;
+        const patterns = this.props.patterns;
         return (
-            <div className="main__plans-container">
+            <section className="main__plans-section">
                 <div className="main__plans-head">
                     <a className="main__plans-header" href="/#" name="services">PRICING PLANS</a>
                     <span className="main__plans-sub-header">FOR YOUR PLANTS</span>
@@ -22,11 +20,12 @@ export class PlanSection extends React.Component {
                                 name={dataPlans[plan].name}
                                 price={dataPlans[plan].price}
                                 description={dataPlans[plan].description}
+                                patterns={patterns}
                             />
                         ))
                     }
                 </div>
-            </div>
+            </section>
         );
     }
 }
