@@ -11,13 +11,16 @@ export class ScrollTopBtn extends React.Component {
         this.handleScroll = this.handleScroll.bind(this);
     }
 
+    // add listener on scroll 
     componentDidMount() {
         this.handleScroll();
         window.addEventListener('scroll', this.handleScroll);
     }
 
     handleScroll() {
+        // handle how much were scrolled 
         if (window.pageYOffset > this.props.showUnder) {
+            // if enough show button 
             if (!this.state.show) {
                 this.setState({ show: true });
             }
@@ -39,5 +42,5 @@ export class ScrollTopBtn extends React.Component {
 
 ScrollTopBtn.propTypes = {
     // show button under this position
-    showUnder: PropTypes.number.isRequired, 
+    showUnder: PropTypes.number.isRequired,
 };

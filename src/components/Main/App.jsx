@@ -37,6 +37,7 @@ export default class App extends React.Component {
     };
   }
 
+  // get all the data 
   componentDidMount() {
     fetch("./data.json")
       .then(res => res.json())
@@ -79,6 +80,7 @@ export default class App extends React.Component {
     } else {
       return (
         <div>
+          {/* show scroll button after 200px have been scrolled  */}
           <ScrollTopBtn showUnder={200} />
           <header className="header">
             <Navigation />

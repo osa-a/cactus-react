@@ -8,6 +8,7 @@ export class Skills extends React.Component{
             <div className="main__team-skills-block">
             <h3 className="main__team-info--header main__team-info-skills--header">Our skills.</h3>
             <ul className="main__team-skill-list">
+                {/* create skill list */}
                 {Object.keys(dataSkills).map(skill => (
                     <li key={skill} className="main__team-skill-element">
                         {dataSkills[skill].name}

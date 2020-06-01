@@ -19,8 +19,10 @@ export class Gallery extends React.Component {
     description(e) {
         let element = e.target;
         let data = element.getAttribute('data-id');
+        // find clicked element 
         data = this.bubblingElement(e, data, element);
         if (!data) {
+            // to hide description if clicked not on the element 
             this.showHideDescription(data);
             return;
         }
@@ -29,6 +31,9 @@ export class Gallery extends React.Component {
 
     bubblingElement(e, data, element) {
         let dataBubble = data;
+        // in case of the deep nesting of the elements content, this thing is checking for every part
+        // of the element which could be clicked (border, image, text and the empty space around)
+        // if it find it, return the main parent with it data-id
         if (!data) {
             element = e.target.parentNode;
             dataBubble = element.getAttribute('data-id');
@@ -49,6 +54,7 @@ export class Gallery extends React.Component {
         const descriptionElem = document.querySelectorAll('.main__gallery-element-description');
         for (let i = 0; i < descriptionElem.length; i++) {
             let dataDescription = descriptionElem[i].getAttribute('data-description');
+            // checking is attribute equal to data-id of chosen element
             if (dataDescription !== data) {
                 descriptionElem[i].classList.remove('main__gallery-element-description--show');
             } else {
@@ -58,11 +64,13 @@ export class Gallery extends React.Component {
     }
 
     getFilters(data) {
+        // return type of each plat
         let filtersArray = Object.keys(data)
             .filter((element) => data[element].type)
             .map((element) => {
                 return data[element].type;
             });
+        // return only unique plant types from array
         filtersArray = filtersArray.reduce((unique, item) => {
             return unique.includes(item) ? unique : [...unique, item]
         }, []);
@@ -70,7 +78,7 @@ export class Gallery extends React.Component {
     }
 
     filterSwitcher(data, filterName) {
-
+        // get unique filters 
         let filtersArray = this.getFilters(data);
 
         for (let key in filtersArray) {
@@ -99,18 +107,20 @@ export class Gallery extends React.Component {
             return;
         }
         let finalData;
-
+        // switch filter state to be able add class with active style 
         this.filterSwitcher(data, filterName);
-
+        // to show all plants make finalData be = to original data
         if (filterName === 'all') {
             finalData = this.props.dataGallery;
         } else {
+            // filter with chosen type
             finalData = Object.keys(data)
                 .filter(element => data[element].type === filterName)
                 .map((element) => {
                     return data[element];
                 });
         }
+        // setting new data to show it
         this.setState({ finalData: finalData });
 
         return finalData;
@@ -118,23 +128,28 @@ export class Gallery extends React.Component {
 
     toUpp(string) {
         if (!string) return string;
+        // first letter toUpperCase 
         return string[0].toUpperCase() + string.slice(1);
     }
 
     render() {
         let dataGallery = this.props.dataGallery;
         let finalData = this.state.finalData;
+        // get unique filter names from plant types 
         let filters = this.getFilters(dataGallery);
         return (
+
             <section className="main__gallery" onClick={(e) => this.description(e)}>
                 <div className="main__gallery-head">
                     <a href="/#" name="gallery" className="main__gallery-header">GALLERY</a>
                     <div className="main__gallery-filters" onClick={(e) => this.runFilter(e, dataGallery)}>
+                        {/* all filter with active state switcher */}
                         <div
                             data-filter="all"
                             className={`main__gallery-filter main__gallery-filter-all  ${this.state.all ? "main__gallery-filter--active" : ""}`} >
                             All
-                    </div>
+                        </div>
+                        {/* creating the list of filters */}
                         {filters.map((filter) => (
                             <div
                                 data-filter={filter} key={filter}
@@ -144,8 +159,9 @@ export class Gallery extends React.Component {
                         ))}
                     </div>
                 </div>
-
-                <Grid container spacing={3} onClick={(e) => this.description(e)}>
+                {/* show plant description  */}
+                <Grid container spacing={3} /*onClick={(e) => this.description(e)}*/>
+                    {/* makign gallery grid  */}
                     {Object.keys(finalData).map((element) => (
                         <Grid key={element} item xs className="main__gallery-element-container">
                             <GalleryElement

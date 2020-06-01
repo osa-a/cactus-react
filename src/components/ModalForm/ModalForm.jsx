@@ -42,21 +42,27 @@ export class ModalForm extends React.Component {
         const patterns = this.props.patterns;
         const attribute = event.target.getAttribute('name');
         const value = event.target.value;
+        // update the state according to changed elements' value 
         this.setState({ [attribute]: [value] });
+        //validation
         let test = (patterns[attribute].test(value));
         if (!test) {
+            //set false if this input is invalid (for submit)
             this.isValid[attribute] = false;
             event.target.classList.remove('main__subscription-form-valid');
             event.target.classList.add('main__subscription-form-invalid');
         } else {
+            //set true if this input is valid (for submit)
             this.isValid[attribute] = true;
             event.target.classList.remove('main__subscription-form-invalid');
             event.target.classList.add('main__subscription-form-valid');
         }
     }
 
-    /* check why this still submit with failed validation */ 
+    //! PlanCard.jsx isModalVisible: false (not done)
+    //!check why this still submit with failed validation 
     submit() {
+        //checking every state in IsValid object if even one is false, return
         for (let key in this.isValid) {
             if (!this.isValid[key]) {
                 return;
@@ -79,6 +85,7 @@ export class ModalForm extends React.Component {
                     <div className="main__subscription-form-name-content" >
                         <input
                             value={this.state.name}
+                            // handle value change
                             onChange={this.validation}
                             name="name"
                             className="main__subscription-form-input main__subscription-form-input--size"

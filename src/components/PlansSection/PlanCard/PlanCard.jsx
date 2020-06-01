@@ -15,6 +15,7 @@ export class PlanCard extends React.Component {
             isModalVisible: true
         }))
         const patterns = this.props.patterns;
+        // create modal 
         const modal = <ModalForm event={e} patterns={patterns} />;
         const section = document.querySelector('.main__plans-section');
         const modalContainer = document.createElement('div');
@@ -38,13 +39,18 @@ export class PlanCard extends React.Component {
                     <span className="main__plan-card-price--month">/mo</span>
                 </p>
                 <div className="main__plan-card-description-container" >
+                    {/* creating description elements */}
                     {
                         Object.keys(description).map((element) => (
                             <div key={element}>{description[element]}</div>
                         ))
                     }
                 </div>
-                <button className="main__plan-card-select-button" type="button" onClick={(e) => this.showModal(e)}>SELECT</button>
+                <button onClick={(e) => this.showModal(e)}
+                    className="main__plan-card-select-button"
+                    type="button">
+                    SELECT
+                </button>
             </div >
         )
     }

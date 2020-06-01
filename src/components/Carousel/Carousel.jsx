@@ -15,7 +15,9 @@ export class Carousel extends React.Component {
           <li data-target="#main__carousel" data-slide-to="2"></li>
         </ol>
         <div className="carousel-inner">
+          {/* creating carousel slides */}
           {Object.keys(dataCarousel).map(item => (
+            // switching active slide 
             <div key={item} className={`carousel-item ${item === 'first' ? "active" : ""}`}>
               <img src={require(`./img/${dataCarousel[item].img}`)} className="main__carousel-img d-block w-100" alt={`${item} slide`} />
               <div className="carousel-caption d-none d-md-block w">

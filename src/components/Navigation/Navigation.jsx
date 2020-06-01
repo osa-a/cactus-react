@@ -4,7 +4,7 @@ import './navigation.scss';
 export class Navigation extends React.Component {
   render() {
     return (
-      //сделать выдвигающийся слева меню бар на мобилах
+      //sliding from left menu-bar
       <nav className="header__navigation">
         <div className="header__burger"></div>
         <div className="header__logo"><a href="#home" name="home"> DECO.</a></div>

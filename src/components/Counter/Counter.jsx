@@ -4,7 +4,6 @@ import CountUp from 'react-countup';
 import './counter.scss';
 
 export class Counter extends React.Component {
-
     render() {
         return (
             <div className="main__counter-container">

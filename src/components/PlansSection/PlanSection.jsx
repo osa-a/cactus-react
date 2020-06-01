@@ -14,6 +14,7 @@ export class PlanSection extends React.Component {
                     <span className="main__plans-sub-header">FOR YOUR PLANTS</span>
                 </div>
                 <div className="main__plans-card-wrapper">
+                    {/* creating plan cards */}
                     {
                         Object.keys(dataPlans).map((plan) => (
                             <PlanCard key={plan}
