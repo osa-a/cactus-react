@@ -60,16 +60,20 @@ export class ModalForm extends React.Component {
     }
 
     //! PlanCard.jsx isModalVisible: false (not done)
-    //!check why this still submit with failed validation 
     submit() {
         //checking every state in IsValid object if even one is false, return
+        let check;
         for (let key in this.isValid) {
+            check = 0;
             if (!this.isValid[key]) {
+                check++;
                 return;
             }
-            else {
-                document.getElementById("subscriptionForm").submit();
-            }
+        }
+        if (check === 0) {
+            document.getElementById("subscriptionForm").submit();
+        } else {
+            return;
         }
     }
 
