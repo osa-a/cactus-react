@@ -29,6 +29,8 @@
 .main__gallery-filters{
     display: flex;
     margin-bottom: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .main__gallery-filter{
@@ -36,6 +38,7 @@
     @include fontSet(1.5em, 1em);
     color: $secondaryText;
     cursor: pointer;
+    margin-bottom: 3vw;
     &:not(:last-of-type){
         margin-right: 30px;
     }
@@ -43,4 +46,40 @@
 
 .main__gallery-filter--active{
     color:$mainText;
+}
+
+
+/*   ADAPTIVE   */
+
+@media (max-width:860px){
+    .main__gallery{
+        padding: 5vw 2vw;
+    }
+    .main__gallery-header{
+        font-family: 'OpenSans Regular', Arial, Helvetica, sans-serif;
+        @include fontSet(3.5em, 1.2em);
+        color: $mainText;
+        margin-bottom: 4vw;
+    }
+}
+
+@media (max-width: 530px) {
+    .main__gallery-filters{
+        margin-bottom: 2vw;
+        justify-content: center;
+    }
+    
+    .main__gallery-filter{
+        @include fontSet(1.2em, 1em);
+        margin-bottom: 3vw;
+        &:not(:last-of-type){
+            margin-right: 2.5vw;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    .main__gallery-header{
+        @include fontSet(3em, 1.2em);
+    }
 }

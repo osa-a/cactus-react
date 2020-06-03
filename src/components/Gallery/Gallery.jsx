@@ -54,7 +54,7 @@ export class Gallery extends React.Component {
         const descriptionElem = document.querySelectorAll('.main__gallery-element-description');
         for (let i = 0; i < descriptionElem.length; i++) {
             let dataDescription = descriptionElem[i].getAttribute('data-description');
-            // checking is attribute equal to data-id of chosen element
+            // checking is attribute equal to data-id of chosen element and toggle show/close
             if (descriptionElem[i].style.display === "block" || dataDescription !== data) {
                 descriptionElem[i].style.display = "none";
             } else {

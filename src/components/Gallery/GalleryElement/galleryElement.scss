@@ -22,6 +22,7 @@
     position: relative;
     border-radius: 15px;
     border: 4px solid transparent;
+    transition: all 0.4s ease-in-out;
     &:hover {
         border: 4px solid $mainAccent;
         .main__gallery-element-text {
@@ -83,4 +84,53 @@
     z-index: 10;
     animation-name: description;
     animation-duration: 1s;
+}
+
+/*   ADAPTIVE   */
+
+@media (max-width: 1040px) {
+    .main__gallery-element-description {
+        @include fontSet(1em, 1.8em);
+        top: 11%;
+        left: 3vw;
+        padding: 1.5vw;
+        max-width: 33.5vw;
+    }
+}
+
+@media (max-width: 809px) {
+    .main__gallery-element-description {
+        left: 11%;
+        max-width: 78%;
+        @include fontSet(1em, 1.8em);
+    }
+}
+
+@media (max-width: 715px) {
+    .main__gallery-element {
+        width: 40vw;
+        height: fit-content;
+        border: 2px solid transparent;
+        &:hover {
+            border: 2px solid $mainAccent;
+        }
+    }
+    .main__gallery-element-img {
+        width: 39.5vw;
+    }
+
+    .main__gallery-element-description {
+        left: 11%;
+        max-width: 78%;
+        @include fontSet(0.8em, 1.8em);
+    }
+}
+
+@media (max-width: 550px) {
+    .main__gallery-element-description {
+        top: 8%;
+        left: 8%;
+        max-width: 85%;
+        @include fontSet(0.8em, 1.8em);
+    }
 }
