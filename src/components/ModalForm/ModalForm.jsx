@@ -1,14 +1,7 @@
 import React from 'react';
 import './modalForm.scss';
 import Select from 'react-select';
-import makeAnimated from 'react-select/animated';
 
-// const types = [
-//     { value: 'Plant', label: 'Plant' },
-//     { value: 'Succ', label: 'Succulent' },
-//     { value: 'Flower', label: 'Flower' },
-//     { value: 'Cactus', label: 'Cactus' }
-// ]
 const day = [
     { value: 'sat', label: 'Saturday' },
     { value: 'sun', label: 'Sunday' }
@@ -34,8 +27,6 @@ export class ModalForm extends React.Component {
             card: '',
             cvv: '',
             expiration: '',
-            // disableSelect: false,
-            // amount: 1
         };
         this.isValid = {
             name: false,
@@ -97,27 +88,8 @@ export class ModalForm extends React.Component {
         }
     }
 
-
-    // disableSelection(value, amount) {
-    //     if (value === null) {
-    //         value = [];
-    //     }
-    //     if (value.length === amount) {
-    //         console.log(value.length);
-    //         this.setState(() => ({
-    //             disableSelect: true,
-    //         }));
-    //     }
-    //     else if (value.length < amount) {
-    //         this.setState(() => ({
-    //             disableSelect: false,
-    //         }));
-    //     }
-    // }
-
     render() {
-        // const amount = this.props.amount;
-        // const finalAmount = parseInt(amount.slice(0, 1));
+
         return (
             <form name="subscriptionForm" id="subscriptionForm" className="main__subscription-form">
                 <button className="main__subscription-form-button main__subscription-form-close-button main__subscription-form-close-button-position"
@@ -126,65 +98,54 @@ export class ModalForm extends React.Component {
                     </button>
                 <fieldset className="main__subscription-form-content">
                     <legend className="main__subscription-form-legend">SUBSCRIPTION FORM</legend>
+{/* FULL NAME  */}
                     <div className="main__subscription-form-name-content" >
-                        <input
+                        <input className="main__subscription-form-input main__subscription-form-input--size" type="text"
                             value={this.state.name}
                             // handle value change
                             onChange={this.validation}
                             name="name"
-                            className="main__subscription-form-input main__subscription-form-input--size"
-                            type="text"
                             placeholder="John"
                         />
-                        <input
+                        <input className="main__subscription-form-input main__subscription-form-input--size" type="text"
                             value={this.state.surname}
                             onChange={this.validation}
                             name="surname"
-                            className="main__subscription-form-input main__subscription-form-input--size"
-                            type="text"
                             placeholder="Doe"
                         />
                     </div>
+{/* COUNTRY  */}
                     <div className="main__subscription-form-country-content">
-                        <input
+                        <input className="main__subscription-form-input main__subscription-form-input--size" type="text"
                             value={this.state.country}
                             onChange={this.validation}
                             name="country"
-                            className="main__subscription-form-input main__subscription-form-input--size"
-                            type="text"
                             placeholder="Ukraine"
                         />
-                        <input
+                        <input className="main__subscription-form-input main__subscription-form-input--size" type="text"
                             value={this.state.city}
                             onChange={this.validation}
                             name="city"
-                            className="main__subscription-form-input main__subscription-form-input--size"
-                            type="text"
                             placeholder="Odessa"
                         />
                     </div>
-                    <input
+{/* CONNECTION */}
+                    <input className="main__subscription-form-input main__subscription-form-input-width" type="text"
                         value={this.state.address}
                         onChange={this.validation}
                         name="address"
-                        className="main__subscription-form-input main__subscription-form-input-width"
-                        type="text"
                         placeholder="65012 Vice Admirala Azarova str./13" />
-                    <input
+                    <input className="main__subscription-form-input main__subscription-form-input-width" type="email"
                         value={this.state.email}
                         onChange={this.validation}
                         name="email"
-                        className="main__subscription-form-input main__subscription-form-input-width"
-                        type="email"
                         placeholder="example@gmail.com" />
-                    <input
+                    <input className="main__subscription-form-input main__subscription-form-input-width" type="tel"
                         value={this.state.phone}
                         onChange={this.validation}
                         name="phone"
-                        className="main__subscription-form-input main__subscription-form-input-width"
-                        type="tel"
                         placeholder="+38(011)11-11-11" />
-                    {/* SELCTIONS  */}
+{/* SELCTIONS  */}
                     <div className="main__subscription-form-selections-container">
                         <div className="main__subscription-form-select-wrapper">
                             <label className="main__subscription-form-select-label" htmlFor="timeSelect">
@@ -192,7 +153,6 @@ export class ModalForm extends React.Component {
                             </label>
                             <Select className="main__subscription-form-select" id="timeSelect"
                                 options={time}
-                                components={makeAnimated()}
                                 defaultValue={time[0]} />
                         </div>
                         <div className="main__subscription-form-select-wrapper">
@@ -201,27 +161,10 @@ export class ModalForm extends React.Component {
                             </label>
                             <Select className="main__subscription-form-select" id="daySelect"
                                 options={day}
-                                components={makeAnimated()}
                                 defaultValue={day[0]} />
                         </div>
-                        {/* <div className="main__subscription-form-select-wrapper">
-                            <label className="main__subscription-form-select-label" htmlFor="typeSelect">
-                                Plant type
-                            </label>
-                            <Select
-                                className="main__subscription-form-select"
-                                id="typeSelect"
-                                options={types}
-                                // closeMenuOnSelect={false}
-                                components={makeAnimated()}
-                                isMulti
-                                onChange={value => this.disableSelection(value, finalAmount)}
-                                isDisabled={this.state.disableSelect ? true : false}
-                                defaultValue={types[0]}
-                            />
-                        </div> */}
                     </div>
-
+{/* PAYMENT */}
                     <div className="main__subscription-form-payment-content">
                         <p className="main__subscription-form-payment-header">CREDIT CARD DETAILS</p>
                         <div className="main__subscription-form-payment-inputs">
@@ -251,8 +194,10 @@ export class ModalForm extends React.Component {
                             />
                         </div>
                     </div>
+{/* COMMENTS */}
                     <textarea className="main__subscription-form-textarea" placeholder="Add any comments..."></textarea>
                 </fieldset>
+{/* BUTTONS */}
                 <div className="main__subscription-form-buttons-container">
                     <button
                         type="reset"

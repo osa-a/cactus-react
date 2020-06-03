@@ -8,7 +8,7 @@ export class PlanCard extends React.Component {
     showModal(e, amount) {
         const patterns = this.props.patterns;
         // create modal 
-        const modal = <ModalForm event={e} patterns={patterns} amount={amount} />;
+        const modal = <ModalForm event={e} patterns={patterns} />;
         const section = document.querySelector('.main__plans-section');
         const modalContainer = document.createElement('div');
         modalContainer.classList.add('main__subscription-form-container', 'main__subscription-form-container--overflow');
@@ -38,7 +38,7 @@ export class PlanCard extends React.Component {
                         ))
                     }
                 </div>
-                <button onClick={(e) => this.showModal(e, description['types'])}
+                <button onClick={(e) => this.showModal(e)}
                     className="main__plan-card-select-button"
                     type="button">
                     SELECT
