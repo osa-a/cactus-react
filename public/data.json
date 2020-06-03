@@ -190,7 +190,7 @@
             "price": "30",
             "description": {
                 "amount": "1 plant per month",
-                "types": "1 plant type",
+                "types": "1 random plant type",
                 "support": "24/7 support"
             }
         },
@@ -199,7 +199,7 @@
             "price": "60",
             "description": {
                 "amount": "2 plants per month",
-                "types": "2 plant types",
+                "types": "2 random plant types",
                 "support": "24/7 support"
             }
         },
@@ -207,8 +207,17 @@
             "name": "ULTRA",
             "price": "90",
             "description": {
+                "amount": "3 plants per month",
+                "types": "3 random plant types",
+                "support": "24/7 support"
+            }
+        },
+        "super-ultra": {
+            "name": "SUPER-ULTRA",
+            "price": "120",
+            "description": {
                 "amount": "4 plants per month",
-                "types": "all plant types",
+                "types": "4 random plant types",
                 "support": "24/7 support"
             }
         }

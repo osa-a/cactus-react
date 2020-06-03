@@ -26,15 +26,11 @@
 }
 
 .main__subscription-form-select {
+    background-color: $sectionDarkBg;
     font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
-    width: 9vw;
-    padding: 5px;
+    width: 15vw;
     border-radius: 10px;
     background-color: transparent;
-    color: $mainText;
-    cursor: pointer;
-    &:focus {
-        background-color: $sectionDarkBg;
-    }
+    background-color: $sectionDarkBg;
 }
 

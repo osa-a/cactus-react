@@ -1,5 +1,24 @@
 import React from 'react';
 import './modalForm.scss';
+import Select from 'react-select';
+import makeAnimated from 'react-select/animated';
+
+// const types = [
+//     { value: 'Plant', label: 'Plant' },
+//     { value: 'Succ', label: 'Succulent' },
+//     { value: 'Flower', label: 'Flower' },
+//     { value: 'Cactus', label: 'Cactus' }
+// ]
+const day = [
+    { value: 'sat', label: 'Saturday' },
+    { value: 'sun', label: 'Sunday' }
+]
+const time = [
+    { value: '9am', label: '9am' },
+    { value: '12pm', label: '12pm' },
+    { value: '3pm', label: '3pm' },
+    { value: '6pm', label: '6pm' }
+]
 
 export class ModalForm extends React.Component {
     constructor(props) {
@@ -14,7 +33,9 @@ export class ModalForm extends React.Component {
             email: '',
             card: '',
             cvv: '',
-            expiration: ''
+            expiration: '',
+            // disableSelect: false,
+            // amount: 1
         };
         this.isValid = {
             name: false,
@@ -59,7 +80,6 @@ export class ModalForm extends React.Component {
         }
     }
 
-    //! PlanCard.jsx isModalVisible: false (not done)
     submit() {
         //checking every state in IsValid object if even one is false, return
         let check;
@@ -77,7 +97,27 @@ export class ModalForm extends React.Component {
         }
     }
 
+
+    // disableSelection(value, amount) {
+    //     if (value === null) {
+    //         value = [];
+    //     }
+    //     if (value.length === amount) {
+    //         console.log(value.length);
+    //         this.setState(() => ({
+    //             disableSelect: true,
+    //         }));
+    //     }
+    //     else if (value.length < amount) {
+    //         this.setState(() => ({
+    //             disableSelect: false,
+    //         }));
+    //     }
+    // }
+
     render() {
+        // const amount = this.props.amount;
+        // const finalAmount = parseInt(amount.slice(0, 1));
         return (
             <form name="subscriptionForm" id="subscriptionForm" className="main__subscription-form">
                 <button className="main__subscription-form-button main__subscription-form-close-button main__subscription-form-close-button-position"
@@ -144,41 +184,42 @@ export class ModalForm extends React.Component {
                         className="main__subscription-form-input main__subscription-form-input-width"
                         type="tel"
                         placeholder="+38(011)11-11-11" />
+                    {/* SELCTIONS  */}
                     <div className="main__subscription-form-selections-container">
                         <div className="main__subscription-form-select-wrapper">
-                            <label className="main__subscription-form-select-label"
-                                htmlFor="timeSelect">
+                            <label className="main__subscription-form-select-label" htmlFor="timeSelect">
                                 Delivery time
-                                </label>
-                            <select className="main__subscription-form-select" id="timeSelect">
-                                <option value="9am">9am</option>
-                                <option value="12pm">12pm</option>
-                                <option value="3pm">3pm</option>
-                                <option value="6pm">6pm</option>
-                            </select>
+                            </label>
+                            <Select className="main__subscription-form-select" id="timeSelect"
+                                options={time}
+                                components={makeAnimated()}
+                                defaultValue={time[0]} />
                         </div>
                         <div className="main__subscription-form-select-wrapper">
-                            <label className="main__subscription-form-select-label"
-                                htmlFor="daySelect">
+                            <label className="main__subscription-form-select-label" htmlFor="daySelect">
                                 Delivery day
-                                </label>
-                            <select className="main__subscription-form-select" id="daySelect">
-                                <option value="">Saturday</option>
-                                <option value="">Sunday</option>
-                            </select>
+                            </label>
+                            <Select className="main__subscription-form-select" id="daySelect"
+                                options={day}
+                                components={makeAnimated()}
+                                defaultValue={day[0]} />
                         </div>
-                        <div className="main__subscription-form-select-wrapper">
-                            <label className="main__subscription-form-select-label"
-                                htmlFor="typeSelect">
+                        {/* <div className="main__subscription-form-select-wrapper">
+                            <label className="main__subscription-form-select-label" htmlFor="typeSelect">
                                 Plant type
-                                </label>
-                            <select className="main__subscription-form-select" id="typeSelect">
-                                <option value="">Cactus</option>
-                                <option value="">Flower</option>
-                                <option value="">Succulent</option>
-                                <option value="">Plant</option>
-                            </select>
-                        </div>
+                            </label>
+                            <Select
+                                className="main__subscription-form-select"
+                                id="typeSelect"
+                                options={types}
+                                // closeMenuOnSelect={false}
+                                components={makeAnimated()}
+                                isMulti
+                                onChange={value => this.disableSelection(value, finalAmount)}
+                                isDisabled={this.state.disableSelect ? true : false}
+                                defaultValue={types[0]}
+                            />
+                        </div> */}
                     </div>
 
                     <div className="main__subscription-form-payment-content">

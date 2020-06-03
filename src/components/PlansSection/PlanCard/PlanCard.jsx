@@ -4,19 +4,11 @@ import './PlanCard.scss';
 import { ModalForm } from '../../ModalForm/ModalForm';
 
 export class PlanCard extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            isModalVisible: false
-        }
-    }
-    showModal(e) {
-        this.setState(() => ({
-            isModalVisible: true
-        }))
+
+    showModal(e, amount) {
         const patterns = this.props.patterns;
         // create modal 
-        const modal = <ModalForm event={e} patterns={patterns} />;
+        const modal = <ModalForm event={e} patterns={patterns} amount={amount} />;
         const section = document.querySelector('.main__plans-section');
         const modalContainer = document.createElement('div');
         modalContainer.classList.add('main__subscription-form-container', 'main__subscription-form-container--overflow');
@@ -39,14 +31,14 @@ export class PlanCard extends React.Component {
                     <span className="main__plan-card-price--month">/mo</span>
                 </p>
                 <div className="main__plan-card-description-container" >
-                    {/* creating description elements */}
+                    {/* creating elements' description */}
                     {
                         Object.keys(description).map((element) => (
                             <div key={element}>{description[element]}</div>
                         ))
                     }
                 </div>
-                <button onClick={(e) => this.showModal(e)}
+                <button onClick={(e) => this.showModal(e, description['types'])}
                     className="main__plan-card-select-button"
                     type="button">
                     SELECT
