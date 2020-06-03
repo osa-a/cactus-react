@@ -55,10 +55,10 @@ export class Gallery extends React.Component {
         for (let i = 0; i < descriptionElem.length; i++) {
             let dataDescription = descriptionElem[i].getAttribute('data-description');
             // checking is attribute equal to data-id of chosen element
-            if (dataDescription !== data) {
-                descriptionElem[i].classList.remove('main__gallery-element-description--show');
+            if (descriptionElem[i].style.display === "block" || dataDescription !== data) {
+                descriptionElem[i].style.display = "none";
             } else {
-                descriptionElem[i].classList.add('main__gallery-element-description--show');
+                descriptionElem[i].style.display = "block";
             }
         }
     }
