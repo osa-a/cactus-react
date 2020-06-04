@@ -12,7 +12,7 @@ export class Team extends React.Component {
             <section className="main__team">
                 <div className="main__team-header-wrapper">
                     <a href="#/" name="team" className="main__team-header"> TALENTED</a>
-                    <span className="main__team-sub-header">SMALL, FRIENDLY AND</span>
+                    <span className="main__team-sub-header">SMALL AND FRIENDLY</span>
 
                 </div>
                 <div className="main__team-content-wrapper">
@@ -22,7 +22,6 @@ export class Team extends React.Component {
                         <Skills dataSkills={dataSkills} />
                     </div>
                 </div>
-
             </section >
         );
     }

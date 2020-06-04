@@ -34,12 +34,6 @@
 
 /*   ADAPTIVE   */
 
-@media (max-width: 1153px) {
-    .main__team-sub-header {
-        font-size: 4.5em;
-    }
-}
-
 @media (max-width: 940px) {
     .main__team-info {
         flex-direction: column;
@@ -49,18 +43,18 @@
 
 @media (max-width: 672px) {
     .main__team-header {
-        font-size: 1.2em;
+        font-size: 3.5em;
     }
     .main__team-sub-header {
-        font-size: 3.5em;
+        font-size: 1.2em;
     }
 }
 
 @media (max-width: 430px) {
     .main__team-header {
-        font-size: 1.1em;
+        font-size: 2em;
     }
     .main__team-sub-header {
-        font-size: 3em;
+        font-size: 1.2em;
     }
 }

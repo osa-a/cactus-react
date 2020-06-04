@@ -185,8 +185,8 @@
         }
     },
     "dataPlans": {
-        "basic": {
-            "name": "BASIC",
+        "COMMON": {
+            "name": "COMMON",
             "price": "30",
             "description": {
                 "amount": "1 plant per month",
@@ -212,8 +212,8 @@
                 "support": "24/7 support"
             }
         },
-        "super-ultra": {
-            "name": "SUPER-ULTRA",
+        "unique": {
+            "name": "UNIQUE",
             "price": "120",
             "description": {
                 "amount": "4 plants per month",

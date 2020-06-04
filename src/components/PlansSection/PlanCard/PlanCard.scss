@@ -7,9 +7,10 @@
     align-items: center;
     padding: 2.5vw 4.5vw;
     background-color: $sectionDarkBg;
-    transition: all .4s ease-in-out;
+    transition: all 0.4s ease-in-out;
     border-top: 3px solid transparent;
     margin-bottom: 1vw;
+    min-width: 20vw;
     &:hover {
         border-top: 3px solid $mainAccent;
         .main__plan-card-select-button {
@@ -55,4 +56,36 @@
     padding: 10px 20px;
     cursor: pointer;
     transition: all 0.4s ease-in-out;
+}
+
+
+@media (max-width: 1500px) {
+    .main__plan-card {
+        min-width: 25vw;
+    }
+}
+
+@media (max-width: 1170px) {
+    .main__plan-card {
+        min-width: 33vw;
+    }
+}
+
+@media (max-width: 700px) {
+    .main__plan-card-price {
+        font-size: 3em;
+    }
+    .main__plan-card {
+        padding: 4vw 7vw;
+        margin-bottom: 2vw;
+    }
+}
+
+@media (max-width: 450px) {
+    .main__plan-card-select-button {
+        font-size: 1em;
+        padding: 8px 14px;
+        border: 2px solid #ffffff;
+        margin-top: 2vw;
+    }
 }
