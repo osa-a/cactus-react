@@ -52,6 +52,10 @@
     }
 }
 
+.carousel-indicators{
+    z-index: 1;
+}
+
 @media (max-width: 921px) {
     .carousel-caption {
         margin-bottom: 2%;

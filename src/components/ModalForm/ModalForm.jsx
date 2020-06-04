@@ -12,6 +12,12 @@ const time = [
     { value: '3pm', label: '3pm' },
     { value: '6pm', label: '6pm' }
 ]
+const subscription = {
+    "common": { label: 'Common $30/mo' },
+    "popular": { label: 'Popular $60/mo' },
+    "ultra": { label: 'Ultra $90/mo' },
+    "unique": { label: 'Unique $120/mo' }
+}
 
 export class ModalForm extends React.Component {
     constructor(props) {
@@ -89,7 +95,7 @@ export class ModalForm extends React.Component {
     }
 
     render() {
-
+        const name = this.props.name.toLowerCase();
         return (
             <form name="subscriptionForm" id="subscriptionForm" className="main__subscription-form">
                 <button className="main__subscription-form-button main__subscription-form-close-button main__subscription-form-close-button-position"
@@ -98,7 +104,7 @@ export class ModalForm extends React.Component {
                     </button>
                 <fieldset className="main__subscription-form-content">
                     <legend className="main__subscription-form-legend">SUBSCRIPTION FORM</legend>
-{/* FULL NAME  */}
+                    {/* FULL NAME  */}
                     <div className="main__subscription-form-name-content" >
                         <input className="main__subscription-form-input main__subscription-form-input--size" type="text"
                             value={this.state.name}
@@ -114,7 +120,7 @@ export class ModalForm extends React.Component {
                             placeholder="Doe"
                         />
                     </div>
-{/* COUNTRY  */}
+                    {/* COUNTRY  */}
                     <div className="main__subscription-form-country-content">
                         <input className="main__subscription-form-input main__subscription-form-input--size" type="text"
                             value={this.state.country}
@@ -129,7 +135,7 @@ export class ModalForm extends React.Component {
                             placeholder="Odessa"
                         />
                     </div>
-{/* CONNECTION */}
+                    {/* CONNECTION */}
                     <input className="main__subscription-form-input main__subscription-form-input-width" type="text"
                         value={this.state.address}
                         onChange={this.validation}
@@ -145,7 +151,7 @@ export class ModalForm extends React.Component {
                         onChange={this.validation}
                         name="phone"
                         placeholder="+38(011)11-11-11" />
-{/* SELCTIONS  */}
+                    {/* SELCTIONS  */}
                     <div className="main__subscription-form-selections-container">
                         <div className="main__subscription-form-select-wrapper">
                             <label className="main__subscription-form-select-label" htmlFor="timeSelect">
@@ -163,8 +169,12 @@ export class ModalForm extends React.Component {
                                 options={day}
                                 defaultValue={day[0]} />
                         </div>
+                        <div className="main__subscription-form-select-wrapper">
+                            <div className="main__subscription-form-select-label">Subscription type</div>
+                            <input className="main__subscription-form-sub-type-input" value={subscription[name].label} disabled />
+                        </div>
                     </div>
-{/* PAYMENT */}
+                    {/* PAYMENT */}
                     <div className="main__subscription-form-payment-content">
                         <p className="main__subscription-form-payment-header">CREDIT CARD DETAILS</p>
                         <div className="main__subscription-form-payment-inputs">
@@ -194,10 +204,10 @@ export class ModalForm extends React.Component {
                             />
                         </div>
                     </div>
-{/* COMMENTS */}
+                    {/* COMMENTS */}
                     <textarea className="main__subscription-form-textarea" placeholder="Add any comments..."></textarea>
                 </fieldset>
-{/* BUTTONS */}
+                {/* BUTTONS */}
                 <div className="main__subscription-form-buttons-container">
                     <button
                         type="reset"

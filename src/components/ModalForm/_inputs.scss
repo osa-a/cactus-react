@@ -56,6 +56,18 @@
     }
 }
 
+.main__subscription-form-sub-type-input{
+    background-color: $sectionDarkBg;
+    font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
+    width: fit-content;
+    border-radius: 10px;
+    background-color: transparent;
+    color: $mainText;
+    padding: 10px 5px;
+    font-size: 15px;
+    text-align: center;
+}
+
 @media(max-width:1230px){
     .main__subscription-form-input--size{
         width: 48%;

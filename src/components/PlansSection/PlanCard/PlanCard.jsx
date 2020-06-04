@@ -5,10 +5,11 @@ import { ModalForm } from '../../ModalForm/ModalForm';
 
 export class PlanCard extends React.Component {
 
-    showModal(e, amount) {
+    showModal(e) {
         const patterns = this.props.patterns;
+        const name = this.props.name;
         // create modal 
-        const modal = <ModalForm event={e} patterns={patterns} />;
+        const modal = <ModalForm event={e} patterns={patterns} name={name} />;
         const section = document.querySelector('.main__plans-section');
         const modalContainer = document.createElement('div');
         modalContainer.classList.add('main__subscription-form-container', 'main__subscription-form-container--overflow');
