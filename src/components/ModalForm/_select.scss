@@ -19,7 +19,7 @@
     margin-bottom: 5px;
 }
 
-.main__subscription-form-payment-header{
+.main__subscription-form-payment-header {
     color: $mainText;
     margin-top: 2vw;
     margin-bottom: 1vw;
@@ -34,3 +34,18 @@
     background-color: $sectionDarkBg;
 }
 
+@media (max-width: 1230px) {
+    .main__subscription-form-select {
+        width: 20vw;
+    }
+}
+
+@media (max-width: 600px) {
+    .main__subscription-form-selections-container {
+        margin-top: 3.5vw;
+        margin-bottom: 3.5vw;
+    }
+    .main__subscription-form-select {
+        width: 25vw;
+    }
+}

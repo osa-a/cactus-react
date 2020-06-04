@@ -39,7 +39,7 @@
 
 .main__subscription-form-payment-inputs {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
@@ -53,5 +53,36 @@
     height: 6vw;
     &:focus {
         background-color: $sectionDarkBg;
+    }
+}
+
+@media(max-width:1230px){
+    .main__subscription-form-input--size{
+        width: 48%;
+    }
+}
+
+@media(max-width:600px){
+    .main__subscription-form {
+        width: 80vw;
+    }
+    .main__subscription-form-payment-inputs {
+        justify-content: center;
+    }
+    .main__subscription-form-payment-input--size {
+        width: 10vw;
+        &:not(:last-of-type){
+            margin-right: 10px;
+        }
+    }
+    .main__subscription-form-card-input--size{
+        margin-right: 10px;
+    }
+    .main__subscription-form-payment-input--size {
+        width: 15vw;
+    }
+    .main__subscription-form-textarea {
+        margin-top: 3.5vw;
+        height: 15vw;
     }
 }

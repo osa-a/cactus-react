@@ -15,7 +15,7 @@
     height: 100%;
     background-color: rgba(0, 0, 0, 0.4);
     overflow-x: auto;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
 }
@@ -52,3 +52,34 @@
     border-bottom: 2px solid $mainAccent;
 }
 
+@media(max-width:1600px){
+    .main__subscription-form-legend {
+        font-size: 25px;
+    }
+}
+
+@media(max-width:1235px){
+    .main__subscription-form {
+        width: 55vw;
+    }
+}
+
+@media(max-width:900px){
+    .main__subscription-form {
+        width:75vw;
+    }
+}
+
+@media(max-width:600px){
+    .main__subscription-form-legend {
+        font-size: 20px;
+    }
+    .main__subscription-form {
+        width: 82vw;
+        padding: 5vw;
+    }
+    .main__subscription-form-content {
+        padding: 3vw;
+    }
+    
+}

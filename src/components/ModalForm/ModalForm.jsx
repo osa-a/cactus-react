@@ -172,7 +172,7 @@ export class ModalForm extends React.Component {
                                 value={this.state.card}
                                 onChange={this.validation}
                                 name="card"
-                                className="main__subscription-form-input"
+                                className="main__subscription-form-input main__subscription-form-card-input--size"
                                 type="text"
                                 placeholder="0000-0000-0000-0000"
                             />
